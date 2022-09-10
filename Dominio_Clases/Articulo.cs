@@ -8,6 +8,6 @@ namespace Dominio_Clases
 {
     internal class Articulo
     {
-        
+        public int MyProperty { get; set; }
     }
 }
