@@ -47,5 +47,11 @@
     <Compile Include="Marca_Negocio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Dominio_Clases\Dominio_Clases.csproj">
+      <Project>{4019f0e0-ed20-423b-8394-03d7a49d1e3c}</Project>
+      <Name>Dominio_Clases</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

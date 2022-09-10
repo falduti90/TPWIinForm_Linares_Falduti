@@ -8,7 +8,7 @@ using System.Data.SqlClient;
 namespace Reglas_Negocio
 {
 
-     class Acceso_A__Db
+     class Acceso_A_Db
     {
         private SqlConnection Conn;
         private SqlCommand Cmd;
@@ -18,7 +18,7 @@ namespace Reglas_Negocio
             get { return DataReader; }
         }
 
-        public  Acceso_A__Db()
+        public  Acceso_A_Db()
         {
             Conn = new SqlConnection("server=.\\SQLEXPRESS; database=CATALOGO_DB; integrated security=true");
             Cmd  = new SqlCommand();
