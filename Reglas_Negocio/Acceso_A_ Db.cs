@@ -13,21 +13,22 @@ namespace Reglas_Negocio
         private SqlConnection Conn;
         private SqlCommand Cmd;
         private SqlDataReader DataReader;
-        public SqlDataReader Lector
-        {
-            get { return DataReader; }
-        }
 
-        public  Acceso_A_Db()
+        public Acceso_A_Db()
         {
             Conn = new SqlConnection("server=.\\SQLEXPRESS; database=CATALOGO_DB; integrated security=true");
-            Cmd  = new SqlCommand();
+            Cmd = new SqlCommand();
         }
 
         public void setearConsulta(string NewConsulta)
         {
             Cmd.CommandType = System.Data.CommandType.Text;
             Cmd.CommandText = NewConsulta;
+        }
+
+        public SqlDataReader Lector
+        {
+            get { return DataReader; }
         }
 
         public void ejecutarLectura()
@@ -42,6 +43,25 @@ namespace Reglas_Negocio
             {
                 throw ex;
             }
+        }
+
+        public void ejecutarAccion()
+        {
+            Cmd.Connection = Conn;
+            try
+            {
+                Conn.Open();
+                Cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public void setearParametro(string nombre, object valor)
+        {
+            Cmd.Parameters.AddWithValue(nombre, valor);
         }
 
         public void cerrarConexion()

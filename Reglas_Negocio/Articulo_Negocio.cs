@@ -10,5 +10,26 @@ namespace Reglas_Negocio
 {
     public class Articulo_Negocio
     {
+
+        public List <Articulo> ListarArticulos ()
+        {
+            List<Articulo> list = new List<Articulo> ();
+            Acceso_A_Db DataBase = new Acceso_A_Db ();
+
+            try
+            {
+
+                return list;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                DataBase.cerrarConexion();
+            }
+            
+        }
     }
 }
