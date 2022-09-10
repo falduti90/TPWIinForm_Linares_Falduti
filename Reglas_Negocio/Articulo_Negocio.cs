@@ -18,8 +18,17 @@ namespace Reglas_Negocio
 
             try
             {
+                DataBase.setearConsulta(""); //consulta SELECT sql
+                DataBase.ejecutarLectura();
 
-                return list;
+                while(DataBase.Lector.Read())
+                {
+                    Articulo obj = new Articulo ();
+
+                    //hay q hacer la consulta y cargar los valores obtenidos dentro del objeto obj
+
+                    list.Add (obj);
+                }
             }
             catch (Exception ex)
             {
@@ -29,7 +38,65 @@ namespace Reglas_Negocio
             {
                 DataBase.cerrarConexion();
             }
-            
+
+            return list; 
+        }
+
+        public void Agregar(Articulo NuevoArticulo)
+        {
+            Acceso_A_Db DataBase = new Acceso_A_Db();
+
+            try
+            {
+                DataBase.setearConsulta(""); //consulta INSERT sql
+                DataBase.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                DataBase.cerrarConexion();
+            }
+        }
+
+        public void Modificar(Articulo ArticuloModificar)
+        {
+            Acceso_A_Db DataBase = new Acceso_A_Db();
+
+            try
+            {
+                DataBase.setearConsulta(""); //consulta UPDATE sql NO OLVIDAR WHERE
+                DataBase.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                DataBase.cerrarConexion();
+            }
+        }
+
+        public void EliminarFisico(Articulo ArticuloEliminar)
+        {
+            Acceso_A_Db DataBase = new Acceso_A_Db();
+
+            try
+            {
+                DataBase.setearConsulta(""); //consulta DELETE sql NO OLVIDAR WHERE
+                DataBase.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                DataBase.cerrarConexion();
+            }
         }
     }
 }
