@@ -8,7 +8,7 @@ using System.Data.SqlClient;
 namespace Reglas_Negocio
 {
 
-     class Acceso_A_Db
+     public class Acceso_A_Db
     {
         private SqlConnection Conn;
         private SqlCommand Cmd;

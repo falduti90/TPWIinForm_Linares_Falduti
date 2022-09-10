@@ -8,7 +8,7 @@ using Dominio_Clases;
 
 namespace Reglas_Negocio
 {
-    class Articulo_Negocio
+    public class Articulo_Negocio
     {
     }
 }
