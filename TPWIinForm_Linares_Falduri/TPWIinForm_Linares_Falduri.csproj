@@ -95,8 +95,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Cel.ico" />
-    <None Include="Resources\Caratula.png" />
-    <None Include="Resources\11.png" />
     <None Include="Resources\1.png" />
     <None Include="Resources\Inicio.png" />
     <None Include="Resources\20211027_114521.jpg" />

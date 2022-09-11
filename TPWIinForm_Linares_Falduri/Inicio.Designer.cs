@@ -46,7 +46,7 @@
             this.label1.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Blue;
-            this.label1.Location = new System.Drawing.Point(32, 432);
+            this.label1.Location = new System.Drawing.Point(66, 325);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(80, 22);
             this.label1.TabIndex = 1;
@@ -56,7 +56,7 @@
             // 
             this.TextBoxNombre.AcceptsReturn = true;
             this.TextBoxNombre.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TextBoxNombre.Location = new System.Drawing.Point(118, 427);
+            this.TextBoxNombre.Location = new System.Drawing.Point(152, 320);
             this.TextBoxNombre.Name = "TextBoxNombre";
             this.TextBoxNombre.Size = new System.Drawing.Size(194, 27);
             this.TextBoxNombre.TabIndex = 2;
@@ -65,7 +65,7 @@
             // BotonContinuar
             // 
             this.BotonContinuar.BackColor = System.Drawing.SystemColors.Highlight;
-            this.BotonContinuar.Location = new System.Drawing.Point(376, 404);
+            this.BotonContinuar.Location = new System.Drawing.Point(198, 353);
             this.BotonContinuar.Name = "BotonContinuar";
             this.BotonContinuar.Size = new System.Drawing.Size(148, 50);
             this.BotonContinuar.TabIndex = 3;
@@ -76,7 +76,7 @@
             // BotonSalir
             // 
             this.BotonSalir.BackColor = System.Drawing.Color.IndianRed;
-            this.BotonSalir.Location = new System.Drawing.Point(734, 432);
+            this.BotonSalir.Location = new System.Drawing.Point(724, 426);
             this.BotonSalir.Name = "BotonSalir";
             this.BotonSalir.Size = new System.Drawing.Size(106, 41);
             this.BotonSalir.TabIndex = 4;
@@ -90,12 +90,13 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::TPWIinForm_Linares_Falduri.Properties.Resources.Caratula;
-            this.pictureBox1.Location = new System.Drawing.Point(-9, -4);
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.pictureBox1.Image = global::TPWIinForm_Linares_Falduri.Properties.Resources._1;
+            this.pictureBox1.Location = new System.Drawing.Point(-1, -2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(862, 504);
+            this.pictureBox1.Size = new System.Drawing.Size(840, 498);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
             // Inicio
@@ -124,12 +125,13 @@
         }
 
         #endregion
+
+        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox TextBoxNombre;
         private System.Windows.Forms.Button BotonContinuar;
         private System.Windows.Forms.Button BotonSalir;
         private System.Windows.Forms.ErrorProvider errorProvider1;
-        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

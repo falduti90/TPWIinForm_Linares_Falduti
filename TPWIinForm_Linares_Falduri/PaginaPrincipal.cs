@@ -23,10 +23,5 @@ namespace TPWIinForm_Linares_Falduri
         {
             LevelSaludo.Text += Nombre_Usuario;
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
     }
 }
