@@ -101,5 +101,15 @@
     <None Include="Resources\Inicio.png" />
     <None Include="Resources\20211027_114521.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Dominio_Clases\Dominio_Clases.csproj">
+      <Project>{4019f0e0-ed20-423b-8394-03d7a49d1e3c}</Project>
+      <Name>Dominio_Clases</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Reglas_Negocio\Reglas_Negocio.csproj">
+      <Project>{f1d5f12f-6575-4f27-a01b-3933b41bb5a5}</Project>
+      <Name>Reglas_Negocio</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
