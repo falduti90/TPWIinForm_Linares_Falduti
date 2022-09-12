@@ -59,6 +59,7 @@
             this.Dgv_Ventas.RowTemplate.Height = 24;
             this.Dgv_Ventas.Size = new System.Drawing.Size(693, 285);
             this.Dgv_Ventas.TabIndex = 1;
+            this.Dgv_Ventas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dgv_Ventas_CellContentClick);
             // 
             // pbxArticulos
             // 

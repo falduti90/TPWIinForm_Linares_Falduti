@@ -20,6 +20,7 @@ namespace Reglas_Negocio
 
         public void setearConsulta(string NewConsulta)
         {
+            Cmd.CommandType = System.Data.CommandType.Text;
             Cmd.CommandText = NewConsulta;
         }
 
@@ -31,6 +32,15 @@ namespace Reglas_Negocio
         public void ejecutarLectura()
         {
             Cmd.Connection = Conn;
+            try
+            {
+                Conn.Open();
+                DataReader = Cmd.ExecuteReader();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
 
         public void ejecutarAccion()
