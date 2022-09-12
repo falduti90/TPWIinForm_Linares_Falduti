@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Dominio_Clases;
+using Reglas_Negocio;
 
 namespace Reglas_Negocio
 {
@@ -16,9 +17,7 @@ namespace Reglas_Negocio
 
             try
             {
-                DataBase.setearConsulta("SELECT ART.ID, ART.CODIGO, ART.NOMBRE, ART.DESCRIPCION, MAR.ID, MAR.DESCRIPCION AS MARCA, CAT.ID, CAT.DESCRIPCION AS TIPO, ART.IMAGENURL, ART.PRECIO  FROM ARTICULOS AS ART " +
-                    "INNER JOIN MARCAS AS MAR ON MAR.ID = ART.IDMARCA " +
-                    "INNER JOIN CATEGORIAS AS CAT ON CAT.ID = MAR.ID"); 
+                DataBase.setearConsulta("SELECT ART.ID, ART.CODIGO, ART.NOMBRE, ART.DESCRIPCION, MAR.ID, MAR.DESCRIPCION AS MARCA, CAT.ID, CAT.DESCRIPCION AS TIPO, ART.IMAGENURL, ART.PRECIO  FROM ARTICULOS AS ART INNER JOIN MARCAS AS MAR ON MAR.ID = ART.IDMARCA INNER JOIN CATEGORIAS AS CAT ON CAT.ID = MAR.ID"); 
                 DataBase.ejecutarLectura();
 
                 while (DataBase.Lector.Read())
@@ -31,15 +30,17 @@ namespace Reglas_Negocio
                     obj.Descripcion = DataBase.Lector.GetString(3);
 
                     obj.Marca = new Marca();
-                    obj.Marca.Id = DataBase.Lector.GetInt32(4);
+                    obj.Marca.MarcaId = DataBase.Lector.GetInt32(4);
                     obj.Marca.Descripcion = DataBase.Lector.GetString(5);
 
                     obj.Categoria = new Categoria();
-                    obj.Categoria.Id = DataBase.Lector.GetInt32(6);
+                    obj.Categoria.CategoriaId = DataBase.Lector.GetInt32(6);
                     obj.Categoria.Descripcion = DataBase.Lector.GetString(7);
 
                     obj.URLImagen = DataBase.Lector.GetString(8);
                     obj.Precio = DataBase.Lector.GetDecimal(9);
+
+
 
                     list.Add(obj);
                 }
