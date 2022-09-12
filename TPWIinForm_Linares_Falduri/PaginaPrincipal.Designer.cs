@@ -57,15 +57,18 @@
             this.Dgv_Ventas.Name = "Dgv_Ventas";
             this.Dgv_Ventas.RowHeadersWidth = 51;
             this.Dgv_Ventas.RowTemplate.Height = 24;
+            this.Dgv_Ventas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.Dgv_Ventas.Size = new System.Drawing.Size(693, 285);
             this.Dgv_Ventas.TabIndex = 1;
             this.Dgv_Ventas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dgv_Ventas_CellContentClick);
+            this.Dgv_Ventas.SelectionChanged += new System.EventHandler(this.Dgv_Ventas_SelectionChanged);
             // 
             // pbxArticulos
             // 
             this.pbxArticulos.Location = new System.Drawing.Point(711, 61);
             this.pbxArticulos.Name = "pbxArticulos";
             this.pbxArticulos.Size = new System.Drawing.Size(340, 285);
+            this.pbxArticulos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbxArticulos.TabIndex = 2;
             this.pbxArticulos.TabStop = false;
             // 

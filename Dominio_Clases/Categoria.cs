@@ -8,7 +8,7 @@ namespace Dominio_Clases
 {
     public class Categoria
     {
-        public int Id { get; set; }
+        public int CategoriaId { get; set; }
         public string Descripcion { get; set; }
         public override string ToString()
         {
