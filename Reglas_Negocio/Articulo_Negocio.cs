@@ -39,7 +39,7 @@ namespace Reglas_Negocio
                     obj.Categoria.Descripcion = DataBase.Lector.GetString(7);
 
                     obj.URLImagen = DataBase.Lector.GetString(8);
-                   obj.Precio = DataBase.Lector.GetDecimal(9);
+                    obj.Precio = DataBase.Lector.GetDecimal(9);
 
                     list.Add(obj);
                 }
