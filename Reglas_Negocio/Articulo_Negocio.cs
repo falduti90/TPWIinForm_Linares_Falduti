@@ -16,14 +16,30 @@ namespace Reglas_Negocio
 
             try
             {
-                DataBase.setearConsulta(""); //consulta SELECT sql
+                DataBase.setearConsulta("SELECT ART.ID, ART.CODIGO, ART.NOMBRE, ART.DESCRIPCION, MAR.ID, MAR.DESCRIPCION AS MARCA, CAT.ID, CAT.DESCRIPCION AS TIPO, ART.IMAGENURL, ART.PRECIO  FROM ARTICULOS AS ART " +
+                    "INNER JOIN MARCAS AS MAR ON MAR.ID = ART.IDMARCA" +
+                    "INNER JOIN CATEGORIAS AS CAT ON CAT.ID = MAR.ID"); 
                 DataBase.ejecutarLectura();
 
                 while (DataBase.Lector.Read())
                 {
                     Articulo obj = new Articulo();
 
-                    //hay q hacer la consulta y cargar los valores obtenidos dentro del objeto obj
+                    obj.ArticuloId = DataBase.Lector.GetInt32(0);
+                    obj.Codigo = DataBase.Lector.GetString(1);
+                    obj.Nombre = DataBase.Lector.GetString(2);
+                    obj.Descripcion = DataBase.Lector.GetString(3);
+
+                    obj.Marca = new Marca();
+                    obj.Marca.Id = DataBase.Lector.GetInt32(4);
+                    obj.Marca.Descripcion = DataBase.Lector.GetString(5);
+
+                    obj.Categoria = new Categoria();
+                    obj.Categoria.Id = DataBase.Lector.GetInt32(6);
+                    obj.Categoria.Descripcion = DataBase.Lector.GetString(7);
+
+                    obj.URLImagen = DataBase.Lector.GetString(8);
+                    obj.Precio = DataBase.Lector.GetString(9);
 
                     list.Add(obj);
                 }
