@@ -17,7 +17,7 @@ namespace Reglas_Negocio
 
             try
             {
-                DataBase.setearConsulta("SELECT ART.ID, ART.CODIGO, ART.NOMBRE, ART.DESCRIPCION, MAR.ID, MAR.DESCRIPCION AS MARCA, CAT.ID, CAT.DESCRIPCION AS TIPO, ART.IMAGENURL, ART.PRECIO  FROM ARTICULOS AS ART INNER JOIN MARCAS AS MAR ON MAR.ID = ART.IDMARCA INNER JOIN CATEGORIAS AS CAT ON CAT.ID = MAR.ID"); 
+                DataBase.setearConsulta("SELECT ART.ID, ART.CODIGO, ART.NOMBRE, ART.DESCRIPCION, MAR.ID, MAR.DESCRIPCION AS MARCA, CAT.ID, CAT.DESCRIPCION AS TIPO, ART.IMAGENURL, ART.PRECIO  FROM ARTICULOS AS ART INNER JOIN MARCAS AS MAR ON MAR.ID = ART.IDMARCA INNER JOIN CATEGORIAS AS CAT ON CAT.ID = MAR.ID");
                 DataBase.ejecutarLectura();
 
                 while (DataBase.Lector.Read())
@@ -57,13 +57,19 @@ namespace Reglas_Negocio
             return list;
         }
 
-        public void Agregar(Articulo NuevoArticulo)
+        public void Insertar_Articulo(Articulo NuevoArticulo)
         {
             Acceso_A_Db DataBase = new Acceso_A_Db();
 
             try
             {
-                DataBase.setearConsulta(""); //consulta INSERT sql
+                DataBase.setearConsulta("inser into ARTICULOS (Codigo, Nombre, Descripcion,  " +
+                "URLImagen,Precio)values('" + NuevoArticulo.Codigo + "' ,'" + NuevoArticulo.Nombre + "','" + NuevoArticulo.Descripcion + "', " +
+                ",'" + NuevoArticulo.Precio + "', @idMarca, @idDCategoria, @UrlImagen");
+                DataBase.setearParametro("@UrlImagen", NuevoArticulo.URLImagen);
+                DataBase.setearParametro("@idMarca", NuevoArticulo.Marca.MarcaId);
+                DataBase.setearParametro("@idDCategoria", NuevoArticulo.Categoria.CategoriaId);
+
                 DataBase.ejecutarAccion();
             }
             catch (Exception ex)
@@ -76,24 +82,6 @@ namespace Reglas_Negocio
             }
         }
 
-        public void Modificar(Articulo ArticuloModificar)
-        {
-            Acceso_A_Db DataBase = new Acceso_A_Db();
-
-            try
-            {
-                DataBase.setearConsulta(""); //consulta UPDATE sql NO OLVIDAR WHERE
-                DataBase.ejecutarAccion();
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-            finally
-            {
-                DataBase.cerrarConexion();
-            }
-        }
 
         public void EliminarFisico(Articulo ArticuloEliminar)
         {
@@ -113,6 +101,34 @@ namespace Reglas_Negocio
                 DataBase.cerrarConexion();
             }
 
+        }
+
+        public void Modificar_Articulo(Articulo NuevoArticulo)
+        {
+            Acceso_A_Db datos = new Acceso_A_Db();
+            try
+            {
+                datos.setearConsulta("update ARTICULOS set Codigo =@Codigo , Nombre = @nombre, Descripcion = desc, " +
+                "ImagenUrl = @Url, IdMarca = @idMarca, IdCategoria= @idDCategoria,Precio= @Precio Where Id =@Id");
+                datos.setearParametro("@Codigo", NuevoArticulo.Codigo);
+                datos.setearParametro("@nombre", NuevoArticulo.Nombre);
+                datos.setearParametro("@desc", NuevoArticulo.Descripcion);
+                datos.setearParametro("@Url", NuevoArticulo.URLImagen);
+                datos.setearParametro("@idMarca", NuevoArticulo.Marca.MarcaId);
+                datos.setearParametro("@idDCategoria", NuevoArticulo.Categoria.CategoriaId);
+                datos.setearParametro("@Precio", NuevoArticulo.Precio);
+                datos.setearParametro("@Id", NuevoArticulo.ArticuloId);
+
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
         }
     }
 }
