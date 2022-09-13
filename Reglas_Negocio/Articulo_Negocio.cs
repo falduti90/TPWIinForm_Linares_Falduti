@@ -89,7 +89,8 @@ namespace Reglas_Negocio
 
             try
             {
-                DataBase.setearConsulta(""); //consulta DELETE sql NO OLVIDAR WHERE
+                DataBase.setearConsulta("delete from CATALOGO_DB where id=@id"); //consulta DELETE sql NO OLVIDAR WHERE
+                DataBase.setearParametro("@id", ArticuloEliminar.ArticuloId);
                 DataBase.ejecutarAccion();
             }
             catch (Exception ex)
