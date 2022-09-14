@@ -73,6 +73,16 @@ namespace TPWIinForm_Linares_Falduri.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Flyer_evento_música_dj_discoteca_moderna_violeta {
+            get {
+                object obj = ResourceManager.GetObject("Flyer evento música dj discoteca moderna violeta", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Negro_y_Púrpura_con_Falla_Digital_Canal_sobre_Tecnología_Banner_para_YouTube {
             get {
                 object obj = ResourceManager.GetObject("Negro_y_Púrpura_con_Falla_Digital_Canal_sobre_Tecnología_Banner_para_YouTube", resourceCulture);

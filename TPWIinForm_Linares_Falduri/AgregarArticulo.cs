@@ -70,5 +70,7 @@ namespace TPWIinForm_Linares_Falduri
         {
             Close();
         }
+
+
     }
 }

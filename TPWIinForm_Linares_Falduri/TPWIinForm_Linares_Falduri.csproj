@@ -113,6 +113,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Cel.ico" />
+    <None Include="Resources\Flyer evento música dj discoteca moderna violeta.png" />
     <None Include="Resources\Negro y Púrpura con Falla Digital Canal sobre Tecnología Banner para YouTube.png" />
     <None Include="Resources\Caratula.png" />
     <None Include="Resources\11.png" />

@@ -42,7 +42,7 @@
             // 
             this.LevelSaludo.AutoSize = true;
             this.LevelSaludo.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LevelSaludo.Location = new System.Drawing.Point(12, 19);
+            this.LevelSaludo.Location = new System.Drawing.Point(791, 9);
             this.LevelSaludo.Name = "LevelSaludo";
             this.LevelSaludo.Size = new System.Drawing.Size(102, 22);
             this.LevelSaludo.TabIndex = 0;
@@ -86,7 +86,7 @@
             // 
             this.Btn_Exit.BackColor = System.Drawing.Color.Magenta;
             this.Btn_Exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Exit.Location = new System.Drawing.Point(957, 300);
+            this.Btn_Exit.Location = new System.Drawing.Point(795, 364);
             this.Btn_Exit.Name = "Btn_Exit";
             this.Btn_Exit.Size = new System.Drawing.Size(112, 57);
             this.Btn_Exit.TabIndex = 6;
@@ -98,7 +98,7 @@
             // 
             this.BtnListado.BackColor = System.Drawing.SystemColors.Highlight;
             this.BtnListado.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnListado.Location = new System.Drawing.Point(437, 64);
+            this.BtnListado.Location = new System.Drawing.Point(830, 173);
             this.BtnListado.Name = "BtnListado";
             this.BtnListado.Size = new System.Drawing.Size(210, 45);
             this.BtnListado.TabIndex = 7;
@@ -121,7 +121,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(1081, 450);
+            this.ClientSize = new System.Drawing.Size(1075, 433);
             this.Controls.Add(this.BtnListado);
             this.Controls.Add(this.Btn_Exit);
             this.Controls.Add(this.Btn_Eliminar);

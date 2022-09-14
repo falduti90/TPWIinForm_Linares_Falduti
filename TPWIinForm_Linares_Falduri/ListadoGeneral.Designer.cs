@@ -38,7 +38,7 @@
             // 
             this.Dgv_Ventas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Dgv_Ventas.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.Dgv_Ventas.Location = new System.Drawing.Point(12, 12);
+            this.Dgv_Ventas.Location = new System.Drawing.Point(12, 99);
             this.Dgv_Ventas.Name = "Dgv_Ventas";
             this.Dgv_Ventas.RowHeadersWidth = 51;
             this.Dgv_Ventas.RowTemplate.Height = 24;
@@ -48,7 +48,7 @@
             // 
             // pbxArticulos
             // 
-            this.pbxArticulos.Location = new System.Drawing.Point(573, 12);
+            this.pbxArticulos.Location = new System.Drawing.Point(573, 99);
             this.pbxArticulos.Name = "pbxArticulos";
             this.pbxArticulos.Size = new System.Drawing.Size(340, 285);
             this.pbxArticulos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -59,7 +59,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(958, 316);
+            this.ClientSize = new System.Drawing.Size(958, 410);
             this.Controls.Add(this.pbxArticulos);
             this.Controls.Add(this.Dgv_Ventas);
             this.Name = "ListadoGeneral";
