@@ -43,14 +43,14 @@
             this.Dgv_Ventas.RowHeadersWidth = 51;
             this.Dgv_Ventas.RowTemplate.Height = 24;
             this.Dgv_Ventas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Dgv_Ventas.Size = new System.Drawing.Size(555, 285);
+            this.Dgv_Ventas.Size = new System.Drawing.Size(602, 300);
             this.Dgv_Ventas.TabIndex = 2;
             // 
             // pbxArticulos
             // 
-            this.pbxArticulos.Location = new System.Drawing.Point(573, 99);
+            this.pbxArticulos.Location = new System.Drawing.Point(650, 99);
             this.pbxArticulos.Name = "pbxArticulos";
-            this.pbxArticulos.Size = new System.Drawing.Size(340, 285);
+            this.pbxArticulos.Size = new System.Drawing.Size(370, 300);
             this.pbxArticulos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbxArticulos.TabIndex = 3;
             this.pbxArticulos.TabStop = false;
@@ -59,10 +59,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(958, 410);
+            this.ClientSize = new System.Drawing.Size(1082, 453);
             this.Controls.Add(this.pbxArticulos);
             this.Controls.Add(this.Dgv_Ventas);
             this.Name = "ListadoGeneral";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ListadoGeneral";
             this.Load += new System.EventHandler(this.ListadoGeneral_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_Ventas)).EndInit();

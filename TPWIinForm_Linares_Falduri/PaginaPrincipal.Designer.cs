@@ -121,7 +121,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(1075, 433);
+            this.ClientSize = new System.Drawing.Size(1082, 453);
             this.Controls.Add(this.BtnListado);
             this.Controls.Add(this.Btn_Exit);
             this.Controls.Add(this.Btn_Eliminar);
@@ -132,6 +132,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "PaginaPrincipal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pagina Principal";
             this.Load += new System.EventHandler(this.PaginaPrincipal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

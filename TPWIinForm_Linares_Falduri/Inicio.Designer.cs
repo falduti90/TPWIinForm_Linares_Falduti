@@ -102,7 +102,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(842, 495);
+            this.ClientSize = new System.Drawing.Size(868, 488);
             this.Controls.Add(this.BotonSalir);
             this.Controls.Add(this.BotonContinuar);
             this.Controls.Add(this.TxtNombre);
@@ -113,6 +113,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Inicio";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inicio";
             this.Load += new System.EventHandler(this.Inicio_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
