@@ -42,7 +42,7 @@
             // 
             this.LevelSaludo.AutoSize = true;
             this.LevelSaludo.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LevelSaludo.Location = new System.Drawing.Point(8, 22);
+            this.LevelSaludo.Location = new System.Drawing.Point(12, 19);
             this.LevelSaludo.Name = "LevelSaludo";
             this.LevelSaludo.Size = new System.Drawing.Size(102, 22);
             this.LevelSaludo.TabIndex = 0;
@@ -84,10 +84,11 @@
             // 
             // Btn_Exit
             // 
-            this.Btn_Exit.BackColor = System.Drawing.Color.YellowGreen;
-            this.Btn_Exit.Location = new System.Drawing.Point(957, 327);
+            this.Btn_Exit.BackColor = System.Drawing.Color.Magenta;
+            this.Btn_Exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Exit.Location = new System.Drawing.Point(957, 300);
             this.Btn_Exit.Name = "Btn_Exit";
-            this.Btn_Exit.Size = new System.Drawing.Size(112, 39);
+            this.Btn_Exit.Size = new System.Drawing.Size(112, 57);
             this.Btn_Exit.TabIndex = 6;
             this.Btn_Exit.Text = "Inicio";
             this.Btn_Exit.UseVisualStyleBackColor = false;
@@ -97,7 +98,7 @@
             // 
             this.BtnListado.BackColor = System.Drawing.SystemColors.Highlight;
             this.BtnListado.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnListado.Location = new System.Drawing.Point(417, 105);
+            this.BtnListado.Location = new System.Drawing.Point(437, 64);
             this.BtnListado.Name = "BtnListado";
             this.BtnListado.Size = new System.Drawing.Size(210, 45);
             this.BtnListado.TabIndex = 7;
@@ -108,9 +109,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::TPWIinForm_Linares_Falduri.Properties.Resources.Negro_y_Púrpura_con_Falla_Digital_Canal_sobre_Tecnología_Banner_para_YouTube;
-            this.pictureBox1.Location = new System.Drawing.Point(-5, 9);
+            this.pictureBox1.Location = new System.Drawing.Point(-539, -33);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1095, 460);
+            this.pictureBox1.Size = new System.Drawing.Size(1625, 489);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
@@ -132,6 +133,7 @@
             this.MaximizeBox = false;
             this.Name = "PaginaPrincipal";
             this.Text = "Pagina Principal";
+            this.Load += new System.EventHandler(this.PaginaPrincipal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

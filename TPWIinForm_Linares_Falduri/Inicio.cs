@@ -12,6 +12,7 @@ namespace TPWIinForm_Linares_Falduri
 {
     public partial class Inicio : Form
     {
+
         public Inicio()
         {
             InitializeComponent();
@@ -30,21 +31,21 @@ namespace TPWIinForm_Linares_Falduri
 
         private void ControlBotones()
         {
-            if (TextBoxNombre.Text.Trim() != string.Empty && TextBoxNombre.Text.All(char.IsLetter))
+            if (TxtNombre.Text.Trim() != string.Empty && TxtNombre.Text.All(char.IsLetter))
             {
                BotonContinuar.Enabled = true;
-                errorProvider1.SetError(TextBoxNombre, "");
+                errorProvider1.SetError(TxtNombre, "");
             }
             else
             {
-                if (!(TextBoxNombre.Text.All(char.IsLetter)))
+                if (!(TxtNombre.Text.All(char.IsLetter)))
                 {
-                    errorProvider1.SetError(TextBoxNombre, "El nombre solo contiene letras");
+                    errorProvider1.SetError(TxtNombre, "El nombre solo contiene letras");
                 }
-                else { errorProvider1.SetError(TextBoxNombre, "Debe introducir su nombre"); }
+                else { errorProvider1.SetError(TxtNombre, "Debe introducir su nombre"); }
             }
             //btnSolicitarPrestamo.Enabled = false;
-            TextBoxNombre.Focus();
+            TxtNombre.Focus();
         }
         private void TextBoxNombre_TextChanged(object sender, EventArgs e)
         {
@@ -53,7 +54,7 @@ namespace TPWIinForm_Linares_Falduri
 
         private void BotonContinuar_Click(object sender, EventArgs e)
         {
-            using (PaginaPrincipal VentanaPrincipal = new PaginaPrincipal(TextBoxNombre.Text))
+            using (PaginaPrincipal VentanaPrincipal = new PaginaPrincipal((string)TxtNombre.Text))
                 VentanaPrincipal.ShowDialog();
         }
     }

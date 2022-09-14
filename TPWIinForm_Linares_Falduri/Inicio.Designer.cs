@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inicio));
             this.label1 = new System.Windows.Forms.Label();
-            this.TextBoxNombre = new System.Windows.Forms.TextBox();
+            this.TxtNombre = new System.Windows.Forms.TextBox();
             this.BotonContinuar = new System.Windows.Forms.Button();
             this.BotonSalir = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
@@ -52,15 +52,14 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Nombre:";
             // 
-            // TextBoxNombre
+            // TxtNombre
             // 
-            this.TextBoxNombre.AcceptsReturn = true;
-            this.TextBoxNombre.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TextBoxNombre.Location = new System.Drawing.Point(114, 427);
-            this.TextBoxNombre.Name = "TextBoxNombre";
-            this.TextBoxNombre.Size = new System.Drawing.Size(198, 27);
-            this.TextBoxNombre.TabIndex = 2;
-            this.TextBoxNombre.TextChanged += new System.EventHandler(this.TextBoxNombre_TextChanged);
+            this.TxtNombre.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtNombre.Location = new System.Drawing.Point(114, 427);
+            this.TxtNombre.Name = "TxtNombre";
+            this.TxtNombre.Size = new System.Drawing.Size(198, 27);
+            this.TxtNombre.TabIndex = 2;
+            this.TxtNombre.TextChanged += new System.EventHandler(this.TextBoxNombre_TextChanged);
             // 
             // BotonContinuar
             // 
@@ -106,7 +105,7 @@
             this.ClientSize = new System.Drawing.Size(842, 495);
             this.Controls.Add(this.BotonSalir);
             this.Controls.Add(this.BotonContinuar);
-            this.Controls.Add(this.TextBoxNombre);
+            this.Controls.Add(this.TxtNombre);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -125,7 +124,7 @@
 
         #endregion
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox TextBoxNombre;
+        private System.Windows.Forms.TextBox TxtNombre;
         private System.Windows.Forms.Button BotonContinuar;
         private System.Windows.Forms.Button BotonSalir;
         private System.Windows.Forms.ErrorProvider errorProvider1;
