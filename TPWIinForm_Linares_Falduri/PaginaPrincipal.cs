@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Text;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,61 +15,40 @@ namespace TPWIinForm_Linares_Falduri
 {
     public partial class PaginaPrincipal : Form
     {
-        private List<Articulo>ListaArticulos;
         string Nombre_Usuario;
+        private List<Articulo> Lista;
         public PaginaPrincipal(string Nombre)
         {
             InitializeComponent();
             Nombre_Usuario = Nombre;
         }
-
-        private void PaginaPrincipal_Load(object sender, EventArgs e)
+        public PaginaPrincipal()
         {
-            LevelSaludo.Text += Nombre_Usuario;
-            Articulo_Negocio negocio = new Articulo_Negocio();
-            ListaArticulos = negocio.ListarArticulos();
-            Dgv_Ventas.DataSource = ListaArticulos;
-            pbxArticulos.Load(ListaArticulos[0].URLImagen);
-            Dgv_Ventas.Columns["URLImagen"].Visible = false;
-            OcultarColumnas();
+            InitializeComponent();
+  
         }
+
 
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
-        private void Dgv_Ventas_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void BtnListado_Click(object sender, EventArgs e)
         {
+            using (ListadoGeneral ListadoGe = new ListadoGeneral())
+            ListadoGe.ShowDialog();
 
         }
-        private void OcultarColumnas()
+        private void PaginaPrincipal_Load(object sender, EventArgs e)
         {
-            Dgv_Ventas.Columns["URLImagen"].Visible = false;
-            Dgv_Ventas.Columns["ArticuloId"].Visible = false;
-           // Dgv_Ventas.Columns["CategoriaId"].Visible = false;
-            //Dgv_Ventas.Columns["MarcaId"].Visible = false;
+            LevelSaludo.Text += Nombre_Usuario;
+            
         }
 
-        private void Dgv_Ventas_SelectionChanged(object sender, EventArgs e)
+        private void Btn_Agregar_Click(object sender, EventArgs e)
         {
-        
-            Articulo Obj = (Articulo)Dgv_Ventas.CurrentRow.DataBoundItem;
-            SubirImagen(Obj.URLImagen);
-        }
-
-        private void SubirImagen(string NuevaImagen)
-        {
-            try
-            {
-            pbxArticulos.Load(NuevaImagen);
-
-            }
-            catch (Exception Ex)
-            {
-                pbxArticulos.Load("https://storage.googleapis.com/proudcity/mebanenc/uploads/2021/03/placeholder-image.png");
-              
-            }
+            AgregarArticulo Alta = new AgregarArticulo();
+            Alta.ShowDialog();  
         }
     }
 }

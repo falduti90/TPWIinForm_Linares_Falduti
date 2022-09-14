@@ -17,16 +17,17 @@ namespace Reglas_Negocio
 
             try
             {
-                DataBase.setearConsulta(""); //consulta SELECT sql
+                DataBase.setearConsulta("select  Id, Descripcion from MARCAS"); //consulta SELECT sql
                 DataBase.ejecutarLectura();
 
                 while (DataBase.Lector.Read())
                 {
-                    Marca obj = new Marca();
-
+                    Marca Obj = new Marca();
+                    Obj.MarcaId = (int)DataBase.Lector["Id"];
+                    Obj.Descripcion= (string)DataBase.Lector["Description"];    
                     //hay q hacer la consulta y cargar los valores obtenidos dentro del objeto obj
 
-                    list.Add(obj);
+                    list.Add(Obj);
                 }
             }
             catch (Exception ex)

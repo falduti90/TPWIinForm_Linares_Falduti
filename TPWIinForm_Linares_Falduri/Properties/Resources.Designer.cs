@@ -69,5 +69,15 @@ namespace TPWIinForm_Linares_Falduri.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Negro_y_Púrpura_con_Falla_Digital_Canal_sobre_Tecnología_Banner_para_YouTube {
+            get {
+                object obj = ResourceManager.GetObject("Negro_y_Púrpura_con_Falla_Digital_Canal_sobre_Tecnología_Banner_para_YouTube", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
