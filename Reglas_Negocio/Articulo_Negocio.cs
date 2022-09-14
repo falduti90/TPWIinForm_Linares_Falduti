@@ -63,14 +63,27 @@ namespace Reglas_Negocio
 
             try
             {
-                DataBase.setearConsulta("INSERT INTO ARTICULOS (Codigo, Nombre, Descripcion, Precio, IdMarca, IdCategoria, ImagenUrl) " +
+                /*DataBase.setearConsulta("INSERT INTO ARTICULOS (Codigo, Nombre, Descripcion, Precio, IdMarca, IdCategoria, ImagenUrl) " +
                 "values('" + NuevoArticulo.Codigo + "', '" + NuevoArticulo.Nombre + "', '" + NuevoArticulo.Descripcion + "', " +
                 "" + NuevoArticulo.Precio + ", @IdMarca, @IdCategoria, @ImagenUrl");
 
                 DataBase.setearParametro("@ImagenUrl", NuevoArticulo.URLImagen);
                 
                 DataBase.setearParametro("@idMarca", NuevoArticulo.Marca.MarcaId);
-                DataBase.setearParametro("@idCategoria", NuevoArticulo.Categoria.CategoriaId);
+                DataBase.setearParametro("@idCategoria", NuevoArticulo.Categoria.CategoriaId);*/
+
+
+                DataBase.setearConsulta("INSERT INTO ARTICULOS (Codigo, Nombre, Descripcion, Precio, IdMarca, IdCategoria, ImagenUrl) " +
+                "values(@Codigo, @nombre, @desc, @Precio, @idMarca, @idDCategoria, @Url)");
+
+                DataBase.setearParametro("@Codigo", NuevoArticulo.Codigo);
+                DataBase.setearParametro("@nombre", NuevoArticulo.Nombre);
+                DataBase.setearParametro("@desc", NuevoArticulo.Descripcion);
+                DataBase.setearParametro("@Url", NuevoArticulo.URLImagen);
+                DataBase.setearParametro("@idMarca", NuevoArticulo.Marca.MarcaId);
+                DataBase.setearParametro("@idDCategoria", NuevoArticulo.Categoria.CategoriaId);
+                DataBase.setearParametro("@Precio", NuevoArticulo.Precio);
+                DataBase.setearParametro("@Id", NuevoArticulo.ArticuloId);
 
                 DataBase.ejecutarAccion();
             }
@@ -83,7 +96,6 @@ namespace Reglas_Negocio
                 DataBase.cerrarConexion();
             }
         }
-
 
         public void EliminarFisico(Articulo ArticuloEliminar)
         {
@@ -111,7 +123,7 @@ namespace Reglas_Negocio
             Acceso_A_Db datos = new Acceso_A_Db();
             try
             {
-                datos.setearConsulta("update ARTICULOS set Codigo =@Codigo , Nombre = @nombre, Descripcion = desc, " +
+                datos.setearConsulta("update ARTICULOS set Codigo =@Codigo , Nombre = @nombre, Descripcion = @desc, " +
                 "ImagenUrl = @Url, IdMarca = @idMarca, IdCategoria= @idDCategoria,Precio= @Precio Where Id =@Id");
                 datos.setearParametro("@Codigo", NuevoArticulo.Codigo);
                 datos.setearParametro("@nombre", NuevoArticulo.Nombre);
