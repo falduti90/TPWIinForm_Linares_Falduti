@@ -21,8 +21,9 @@ namespace TPWIinForm_Linares_Falduri
 
         private void BotonAgregarArticulo_Click(object sender, EventArgs e)
         {
-            Articulo Art=new Articulo();
+            Articulo Art = new Articulo();
             Articulo_Negocio articulo_Negocio = new Articulo_Negocio();
+          
             try
             {
                 Art.Codigo = TxCodigo.Text;
@@ -31,15 +32,18 @@ namespace TPWIinForm_Linares_Falduri
                 Art.Precio = decimal.Parse (TxPrecio.Text);
                 Art.URLImagen= TxImagen.Text;
 
+                Art.Marca = (Marca)CboMarca.SelectedItem;
+                Art.Categoria = (Categoria)CboCategoria.SelectedItem;
+
                 articulo_Negocio.Insertar_Articulo(Art);
+                
                 MessageBox.Show("El registro fue agregado con exito");
+              
                 Close();
-
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
-                throw;
+                MessageBox.Show(ex.ToString());
             }
         }
 
@@ -47,6 +51,7 @@ namespace TPWIinForm_Linares_Falduri
         {
             Marca_Negocio marca_Negocio=new Marca_Negocio();
             Categoria_Negocio categoria_Negocio = new Categoria_Negocio ();
+
             try
             {
                 CboMarca.DataSource = marca_Negocio.ListarMarcas();

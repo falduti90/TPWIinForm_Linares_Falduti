@@ -63,12 +63,14 @@ namespace Reglas_Negocio
 
             try
             {
-                DataBase.setearConsulta("inser into ARTICULOS (Codigo, Nombre, Descripcion,  " +
-                "URLImagen,Precio)values('" + NuevoArticulo.Codigo + "' ,'" + NuevoArticulo.Nombre + "','" + NuevoArticulo.Descripcion + "', " +
-                ",'" + NuevoArticulo.Precio + "', @idMarca, @idDCategoria, @UrlImagen");
-                DataBase.setearParametro("@UrlImagen", NuevoArticulo.URLImagen);
+                DataBase.setearConsulta("INSERT INTO ARTICULOS (Codigo, Nombre, Descripcion, Precio, IdMarca, IdCategoria, ImagenUrl) " +
+                "values('" + NuevoArticulo.Codigo + "', '" + NuevoArticulo.Nombre + "', '" + NuevoArticulo.Descripcion + "', " +
+                "" + NuevoArticulo.Precio + ", @IdMarca, @IdCategoria, @ImagenUrl");
+
+                DataBase.setearParametro("@ImagenUrl", NuevoArticulo.URLImagen);
+                
                 DataBase.setearParametro("@idMarca", NuevoArticulo.Marca.MarcaId);
-                DataBase.setearParametro("@idDCategoria", NuevoArticulo.Categoria.CategoriaId);
+                DataBase.setearParametro("@idCategoria", NuevoArticulo.Categoria.CategoriaId);
 
                 DataBase.ejecutarAccion();
             }
