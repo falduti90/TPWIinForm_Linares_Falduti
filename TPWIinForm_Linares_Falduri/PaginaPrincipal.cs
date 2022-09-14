@@ -16,7 +16,7 @@ namespace TPWIinForm_Linares_Falduri
     public partial class PaginaPrincipal : Form
     {
         string Nombre_Usuario;
-        private List<Articulo> Lista;
+       
         public PaginaPrincipal(string Nombre)
         {
             InitializeComponent();
@@ -25,7 +25,7 @@ namespace TPWIinForm_Linares_Falduri
         public PaginaPrincipal()
         {
             InitializeComponent();
-  
+            
         }
 
 
@@ -39,16 +39,17 @@ namespace TPWIinForm_Linares_Falduri
             ListadoGe.ShowDialog();
 
         }
-        private void PaginaPrincipal_Load(object sender, EventArgs e)
-        {
-            LevelSaludo.Text += Nombre_Usuario;
-            
-        }
 
         private void Btn_Agregar_Click(object sender, EventArgs e)
         {
             AgregarArticulo Alta = new AgregarArticulo();
             Alta.ShowDialog();  
+        }
+
+
+        private void PaginaPrincipal_Load(object sender, EventArgs e)
+        {
+            LevelSaludo.Text += Nombre_Usuario;
         }
     }
 }

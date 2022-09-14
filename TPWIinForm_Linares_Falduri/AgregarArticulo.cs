@@ -45,6 +45,7 @@ namespace TPWIinForm_Linares_Falduri
 
         private void AgregarArticulo_Load(object sender, EventArgs e)
         {
+
             Marca_Negocio marca_Negocio=new Marca_Negocio();
             Categoria_Negocio categoria_Negocio = new Categoria_Negocio ();
             try
