@@ -9,7 +9,6 @@ namespace Reglas_Negocio
 {
     public class Categoria_Negocio
     {
-
         public List<Categoria> ListarCategorias()
         {
             List<Categoria> list = new List<Categoria>();
@@ -17,19 +16,18 @@ namespace Reglas_Negocio
 
             try
             {
-                DataBase.setearConsulta("select  Id, Descripcion from CATEGORIAS"); //consulta SELECT sql
+                DataBase.setearConsulta("select Id, Descripcion from CATEGORIAS");
                 DataBase.ejecutarLectura();
 
                 while (DataBase.Lector.Read())
                 {
                     Categoria Obj = new Categoria();
-                    Obj.CategoriaId = (int)DataBase.Lector["Id"];
-                    Obj.Descripcion= (string)DataBase.Lector["Description"];
-                    //hay q hacer la consulta y cargar los valores obtenidos dentro del objeto obj
+
+                    Obj.CategoriaId = DataBase.Lector.GetInt32(0);
+                    Obj.Descripcion= DataBase.Lector.GetString(1);
 
                     list.Add(Obj);
                 }
-                return list;
             }
             catch (Exception ex)
             {

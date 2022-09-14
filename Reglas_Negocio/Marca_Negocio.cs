@@ -23,9 +23,9 @@ namespace Reglas_Negocio
                 while (DataBase.Lector.Read())
                 {
                     Marca Obj = new Marca();
-                    Obj.MarcaId = (int)DataBase.Lector["Id"];
-                    Obj.Descripcion= (string)DataBase.Lector["Description"];    
-                    //hay q hacer la consulta y cargar los valores obtenidos dentro del objeto obj
+
+                    Obj.MarcaId = DataBase.Lector.GetInt32(0);
+                    Obj.Descripcion = DataBase.Lector.GetString(1);
 
                     list.Add(Obj);
                 }
