@@ -29,28 +29,32 @@ namespace TPWIinForm_Linares_Falduri
 
         private void Modificar_Load(object sender, EventArgs e)
         {
-
-            TxCodigo.Text=Obj.Codigo;
-            TxDesc.Text = Obj.Descripcion;
-            TxNombre.Text = Obj.Nombre;
-            TxPrecio.Text = Obj.Precio.ToString();
-            Marca_Negocio marca_Negocio = new Marca_Negocio();
-            Categoria_Negocio categoria_Negocio = new Categoria_Negocio();
+            Marca_Negocio marca = new Marca_Negocio();
+            Categoria_Negocio cat = new Categoria_Negocio();
 
             try
             {
-                CboMarca.DataSource = marca_Negocio.ListarMarcas();
-                CboCategoria.DataSource = categoria_Negocio.ListarCategorias();
+                CboMarca.DataSource = marca.ListarMarcas();
+                CboMarca.ValueMember = "MarcaId";
+                CboMarca.DisplayMember = "Descripcion";
+                CboCategoria.DataSource = cat.ListarCategorias();
+                CboCategoria.ValueMember = "CategoriaId";
+                CboCategoria.DisplayMember = "Descripcion";
 
+                TxCodigo.Text = Obj.Codigo;
+                TxDesc.Text = Obj.Descripcion;
+                TxNombre.Text = Obj.Nombre;
+                TxPrecio.Text = Obj.Precio.ToString();
+
+                CboMarca.SelectedValue = Obj.Marca.MarcaId;
+                CboCategoria.SelectedValue = Obj.Categoria.CategoriaId;
+
+                cargarImagen(Obj.URLImagen);
             }
-            catch (Exception Ex)
+            catch (Exception ex)
             {
-
-                MessageBox.Show(Ex.ToString());
+                MessageBox.Show(ex.Message);
             }
-
-
-
         }
 
         private void BotonModificar_Click(object sender, EventArgs e)
@@ -78,6 +82,18 @@ namespace TPWIinForm_Linares_Falduri
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void cargarImagen(string imagen)
+        {
+            try
+            {
+                Pbox.Load(imagen);
+            }
+            catch (Exception ex)
+            {
+                Pbox.Load("https://efectocolibri.com/wp-content/uploads/2021/01/placeholder.png");
             }
         }
     }

@@ -55,7 +55,7 @@ namespace TPWIinForm_Linares_Falduri
         private void BotonContinuar_Click(object sender, EventArgs e)
         {
             using (PaginaPrincipal VentanaPrincipal = new PaginaPrincipal((string)TxtNombre.Text))
-                VentanaPrincipal.ShowDialog();
+            VentanaPrincipal.ShowDialog();
         }
     }
 }

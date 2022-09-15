@@ -23,6 +23,7 @@ namespace TPWIinForm_Linares_Falduri
         private void ListadoGeneral_Load(object sender, EventArgs e)
         {
             Articulo_Negocio negocio = new Articulo_Negocio();
+            
             ListaArticulos = negocio.ListarArticulos();
             Dgv_Ventas.DataSource = ListaArticulos;
             pbxArticulos.Load(ListaArticulos[0].URLImagen);
@@ -86,6 +87,16 @@ namespace TPWIinForm_Linares_Falduri
             {
                 MessageBox.Show(ex.ToString());
             }
+        }
+
+        private void Dgv_Ventas_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void pbxArticulos_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

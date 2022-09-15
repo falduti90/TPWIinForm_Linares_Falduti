@@ -47,6 +47,7 @@
             this.Dgv_Ventas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.Dgv_Ventas.Size = new System.Drawing.Size(602, 300);
             this.Dgv_Ventas.TabIndex = 2;
+            this.Dgv_Ventas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dgv_Ventas_CellContentClick);
             // 
             // pbxArticulos
             // 
@@ -56,6 +57,7 @@
             this.pbxArticulos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbxArticulos.TabIndex = 3;
             this.pbxArticulos.TabStop = false;
+            this.pbxArticulos.Click += new System.EventHandler(this.pbxArticulos_Click);
             // 
             // BtnModificar
             // 

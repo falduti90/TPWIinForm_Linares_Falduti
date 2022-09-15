@@ -93,8 +93,10 @@ namespace Reglas_Negocio
 
             try
             {
-                DataBase.setearConsulta("delete from CATALOGO_DB where id=@id");
+                DataBase.setearConsulta("delete from ARTICULOS where id = @id");
+               
                 DataBase.setearParametro("@id", id);
+                
                 DataBase.ejecutarAccion();
             }
             catch (Exception ex)
@@ -110,21 +112,22 @@ namespace Reglas_Negocio
 
         public void Modificar_Articulo(Articulo NuevoArticulo)
         {
-            Acceso_A_Db datos = new Acceso_A_Db();
+            Acceso_A_Db DataBase = new Acceso_A_Db();
             try
             {
-                datos.setearConsulta("update ARTICULOS set Codigo =@Codigo , Nombre = @nombre, Descripcion = @desc, " +
-                "ImagenUrl = @Url, IdMarca = @idMarca, IdCategoria= @idDCategoria,Precio= @Precio Where Id =@Id");
-                datos.setearParametro("@Codigo", NuevoArticulo.Codigo);
-                datos.setearParametro("@nombre", NuevoArticulo.Nombre);
-                datos.setearParametro("@desc", NuevoArticulo.Descripcion);
-                datos.setearParametro("@Url", NuevoArticulo.URLImagen);
-                datos.setearParametro("@idMarca", NuevoArticulo.Marca.MarcaId);
-                datos.setearParametro("@idDCategoria", NuevoArticulo.Categoria.CategoriaId);
-                datos.setearParametro("@Precio", NuevoArticulo.Precio);
-                datos.setearParametro("@Id", NuevoArticulo.ArticuloId);
+                DataBase.setearConsulta("update ARTICULOS set Codigo = @Codigo, Nombre = @nombre, Descripcion = @desc, " +
+                "ImagenUrl = @Url, IdMarca = @idMarca, IdCategoria = @idDCategoria, Precio = @Precio Where Id = @Id");
+                
+                DataBase.setearParametro("@Codigo", NuevoArticulo.Codigo);
+                DataBase.setearParametro("@nombre", NuevoArticulo.Nombre);
+                DataBase.setearParametro("@desc", NuevoArticulo.Descripcion);
+                DataBase.setearParametro("@Url", NuevoArticulo.URLImagen);
+                DataBase.setearParametro("@idMarca", NuevoArticulo.Marca.MarcaId);
+                DataBase.setearParametro("@idDCategoria", NuevoArticulo.Categoria.CategoriaId);
+                DataBase.setearParametro("@Precio", NuevoArticulo.Precio);
+                DataBase.setearParametro("@Id", NuevoArticulo.ArticuloId);
 
-                datos.ejecutarAccion();
+                DataBase.ejecutarAccion();
             }
             catch (Exception ex)
             {
@@ -132,7 +135,7 @@ namespace Reglas_Negocio
             }
             finally
             {
-                datos.cerrarConexion();
+                DataBase.cerrarConexion();
             }
         }
     }

@@ -45,6 +45,8 @@
             this.LevelDescripcion = new System.Windows.Forms.Label();
             this.LevelNombre = new System.Windows.Forms.Label();
             this.LabelCodigo = new System.Windows.Forms.Label();
+            this.Pbox = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.Pbox)).BeginInit();
             this.SuspendLayout();
             // 
             // CboCategoria
@@ -97,7 +99,7 @@
             // 
             this.BotonSalir.BackColor = System.Drawing.Color.Orchid;
             this.BotonSalir.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BotonSalir.Location = new System.Drawing.Point(638, 381);
+            this.BotonSalir.Location = new System.Drawing.Point(718, 381);
             this.BotonSalir.Name = "BotonSalir";
             this.BotonSalir.Size = new System.Drawing.Size(150, 57);
             this.BotonSalir.TabIndex = 29;
@@ -118,7 +120,7 @@
             this.BotonModificar.BackColor = System.Drawing.SystemColors.InfoText;
             this.BotonModificar.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BotonModificar.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.BotonModificar.Location = new System.Drawing.Point(591, 206);
+            this.BotonModificar.Location = new System.Drawing.Point(557, 381);
             this.BotonModificar.Name = "BotonModificar";
             this.BotonModificar.Size = new System.Drawing.Size(138, 53);
             this.BotonModificar.TabIndex = 27;
@@ -236,11 +238,20 @@
             this.LabelCodigo.Text = "Codigo";
             this.LabelCodigo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // Pbox
+            // 
+            this.Pbox.Location = new System.Drawing.Point(620, 77);
+            this.Pbox.Name = "Pbox";
+            this.Pbox.Size = new System.Drawing.Size(248, 289);
+            this.Pbox.TabIndex = 34;
+            this.Pbox.TabStop = false;
+            // 
             // Modificar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(897, 450);
+            this.Controls.Add(this.Pbox);
             this.Controls.Add(this.CboCategoria);
             this.Controls.Add(this.CboMarca);
             this.Controls.Add(this.LabelCategoria);
@@ -261,6 +272,7 @@
             this.Name = "Modificar";
             this.Text = "Modificar";
             this.Load += new System.EventHandler(this.Modificar_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.Pbox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -285,5 +297,6 @@
         private System.Windows.Forms.Label LevelDescripcion;
         private System.Windows.Forms.Label LevelNombre;
         private System.Windows.Forms.Label LabelCodigo;
+        private System.Windows.Forms.PictureBox Pbox;
     }
 }
