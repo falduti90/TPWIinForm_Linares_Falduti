@@ -113,6 +113,7 @@
             this.Dgv_Ventas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.Dgv_Ventas.Size = new System.Drawing.Size(762, 300);
             this.Dgv_Ventas.TabIndex = 8;
+            this.Dgv_Ventas.SelectionChanged += new System.EventHandler(this.Dgv_Ventas_SelectionChanged_1);
             // 
             // PaginaPrincipal
             // 

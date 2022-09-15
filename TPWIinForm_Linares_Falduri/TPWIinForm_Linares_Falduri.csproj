@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>Cel.ico</ApplicationIcon>
+    <ApplicationIcon>Resources\Cel.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -56,17 +56,11 @@
     <Compile Include="AgregarArticulo.Designer.cs">
       <DependentUpon>AgregarArticulo.cs</DependentUpon>
     </Compile>
-    <Compile Include="ListadoGeneral.cs">
+    <Compile Include="ModificarArticulo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ListadoGeneral.Designer.cs">
-      <DependentUpon>ListadoGeneral.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Modificar.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Modificar.Designer.cs">
-      <DependentUpon>Modificar.cs</DependentUpon>
+    <Compile Include="ModificarArticulo.Designer.cs">
+      <DependentUpon>ModificarArticulo.cs</DependentUpon>
     </Compile>
     <Compile Include="PaginaPrincipal.cs">
       <SubType>Form</SubType>
@@ -74,25 +68,22 @@
     <Compile Include="PaginaPrincipal.Designer.cs">
       <DependentUpon>PaginaPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="Inicio.cs">
+    <Compile Include="Bienvenida.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Inicio.Designer.cs">
-      <DependentUpon>Inicio.cs</DependentUpon>
+    <Compile Include="Bienvenida.Designer.cs">
+      <DependentUpon>Bienvenida.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AgregarArticulo.resx">
       <DependentUpon>AgregarArticulo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Inicio.resx">
-      <DependentUpon>Inicio.cs</DependentUpon>
+    <EmbeddedResource Include="Bienvenida.resx">
+      <DependentUpon>Bienvenida.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ListadoGeneral.resx">
-      <DependentUpon>ListadoGeneral.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Modificar.resx">
-      <DependentUpon>Modificar.cs</DependentUpon>
+    <EmbeddedResource Include="ModificarArticulo.resx">
+      <DependentUpon>ModificarArticulo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PaginaPrincipal.resx">
       <DependentUpon>PaginaPrincipal.cs</DependentUpon>
@@ -121,7 +112,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Cel.ico" />
+    <Content Include="Resources\Cel.ico" />
     <None Include="Resources\Flyer evento música dj discoteca moderna violeta.png" />
     <None Include="Resources\Negro y Púrpura con Falla Digital Canal sobre Tecnología Banner para YouTube.png" />
     <None Include="Resources\Caratula.png" />

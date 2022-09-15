@@ -20,6 +20,7 @@ namespace Reglas_Negocio
                 DataBase.setearConsulta("SELECT ART.ID, ART.CODIGO, ART.NOMBRE, ART.DESCRIPCION, MAR.ID, MAR.DESCRIPCION AS MARCA, CAT.ID, CAT.DESCRIPCION AS TIPO, ART.IMAGENURL, ART.PRECIO  FROM ARTICULOS AS ART " +
                     "INNER JOIN MARCAS AS MAR ON MAR.ID = ART.IDMARCA " +
                     "INNER JOIN CATEGORIAS AS CAT ON CAT.ID = MAR.ID");
+                
                 DataBase.ejecutarLectura();
 
                 while (DataBase.Lector.Read())
@@ -73,7 +74,6 @@ namespace Reglas_Negocio
                 DataBase.setearParametro("@idMarca", NuevoArticulo.Marca.MarcaId);
                 DataBase.setearParametro("@idDCategoria", NuevoArticulo.Categoria.CategoriaId);
                 DataBase.setearParametro("@Precio", NuevoArticulo.Precio);
-                DataBase.setearParametro("@Id", NuevoArticulo.ArticuloId);
 
                 DataBase.ejecutarAccion();
             }
@@ -93,7 +93,7 @@ namespace Reglas_Negocio
 
             try
             {
-                DataBase.setearConsulta("delete from ARTICULOS where id = @id");
+                DataBase.setearConsulta("DELETE FROM ARTICULOS WHERE id = @id");
                
                 DataBase.setearParametro("@id", id);
                 
@@ -110,22 +110,22 @@ namespace Reglas_Negocio
 
         }
 
-        public void Modificar_Articulo(Articulo NuevoArticulo)
+        public void Modificar_Articulo(Articulo NuevoArticulo, int IdArticulo)
         {
             Acceso_A_Db DataBase = new Acceso_A_Db();
             try
             {
-                DataBase.setearConsulta("update ARTICULOS set Codigo = @Codigo, Nombre = @nombre, Descripcion = @desc, " +
-                "ImagenUrl = @Url, IdMarca = @idMarca, IdCategoria = @idDCategoria, Precio = @Precio Where Id = @Id");
+                DataBase.setearConsulta("update ARTICULOS set Codigo = @Codigo, Nombre = @Nombre, Descripcion = @Desc, " +
+                "IdMarca = @IdMarca, IdCategoria = @IdDCategoria, ImagenUrl = @Url, Precio = @Precio Where Id = @Id");
                 
                 DataBase.setearParametro("@Codigo", NuevoArticulo.Codigo);
-                DataBase.setearParametro("@nombre", NuevoArticulo.Nombre);
-                DataBase.setearParametro("@desc", NuevoArticulo.Descripcion);
+                DataBase.setearParametro("@Nombre", NuevoArticulo.Nombre);
+                DataBase.setearParametro("@Desc", NuevoArticulo.Descripcion);
                 DataBase.setearParametro("@Url", NuevoArticulo.URLImagen);
-                DataBase.setearParametro("@idMarca", NuevoArticulo.Marca.MarcaId);
-                DataBase.setearParametro("@idDCategoria", NuevoArticulo.Categoria.CategoriaId);
+                DataBase.setearParametro("@IdMarca", NuevoArticulo.Marca.MarcaId);
+                DataBase.setearParametro("@IdDCategoria", NuevoArticulo.Categoria.CategoriaId);
                 DataBase.setearParametro("@Precio", NuevoArticulo.Precio);
-                DataBase.setearParametro("@Id", NuevoArticulo.ArticuloId);
+                DataBase.setearParametro("@Id", IdArticulo);
 
                 DataBase.ejecutarAccion();
             }

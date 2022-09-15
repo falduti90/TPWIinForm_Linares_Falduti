@@ -1,6 +1,6 @@
 ﻿namespace TPWIinForm_Linares_Falduri
 {
-    partial class Modificar
+    partial class ModificarArticulo
     {
         /// <summary>
         /// Required designer variable.
@@ -57,7 +57,7 @@
             this.CboCategoria.Location = new System.Drawing.Point(274, 345);
             this.CboCategoria.Name = "CboCategoria";
             this.CboCategoria.Size = new System.Drawing.Size(229, 28);
-            this.CboCategoria.TabIndex = 33;
+            this.CboCategoria.TabIndex = 7;
             // 
             // CboMarca
             // 
@@ -67,7 +67,7 @@
             this.CboMarca.Location = new System.Drawing.Point(274, 303);
             this.CboMarca.Name = "CboMarca";
             this.CboMarca.Size = new System.Drawing.Size(229, 28);
-            this.CboMarca.TabIndex = 32;
+            this.CboMarca.TabIndex = 6;
             // 
             // LabelCategoria
             // 
@@ -102,7 +102,7 @@
             this.BotonSalir.Location = new System.Drawing.Point(718, 381);
             this.BotonSalir.Name = "BotonSalir";
             this.BotonSalir.Size = new System.Drawing.Size(150, 57);
-            this.BotonSalir.TabIndex = 29;
+            this.BotonSalir.TabIndex = 9;
             this.BotonSalir.Text = "Cancelar/Volver";
             this.BotonSalir.UseVisualStyleBackColor = false;
             // 
@@ -123,7 +123,7 @@
             this.BotonModificar.Location = new System.Drawing.Point(557, 381);
             this.BotonModificar.Name = "BotonModificar";
             this.BotonModificar.Size = new System.Drawing.Size(138, 53);
-            this.BotonModificar.TabIndex = 27;
+            this.BotonModificar.TabIndex = 8;
             this.BotonModificar.Text = "Modificar";
             this.BotonModificar.UseVisualStyleBackColor = false;
             this.BotonModificar.Click += new System.EventHandler(this.BotonModificar_Click);
@@ -135,7 +135,7 @@
             this.TxNombre.Location = new System.Drawing.Point(274, 120);
             this.TxNombre.Name = "TxNombre";
             this.TxNombre.Size = new System.Drawing.Size(233, 31);
-            this.TxNombre.TabIndex = 26;
+            this.TxNombre.TabIndex = 2;
             // 
             // TxDesc
             // 
@@ -144,7 +144,7 @@
             this.TxDesc.Location = new System.Drawing.Point(274, 166);
             this.TxDesc.Name = "TxDesc";
             this.TxDesc.Size = new System.Drawing.Size(231, 31);
-            this.TxDesc.TabIndex = 25;
+            this.TxDesc.TabIndex = 3;
             // 
             // TxPrecio
             // 
@@ -153,7 +153,7 @@
             this.TxPrecio.Location = new System.Drawing.Point(274, 214);
             this.TxPrecio.Name = "TxPrecio";
             this.TxPrecio.Size = new System.Drawing.Size(231, 31);
-            this.TxPrecio.TabIndex = 24;
+            this.TxPrecio.TabIndex = 4;
             // 
             // TxImagen
             // 
@@ -162,7 +162,7 @@
             this.TxImagen.Location = new System.Drawing.Point(274, 263);
             this.TxImagen.Name = "TxImagen";
             this.TxImagen.Size = new System.Drawing.Size(231, 31);
-            this.TxImagen.TabIndex = 23;
+            this.TxImagen.TabIndex = 5;
             // 
             // TxCodigo
             // 
@@ -171,7 +171,7 @@
             this.TxCodigo.Location = new System.Drawing.Point(274, 77);
             this.TxCodigo.Name = "TxCodigo";
             this.TxCodigo.Size = new System.Drawing.Size(231, 31);
-            this.TxCodigo.TabIndex = 22;
+            this.TxCodigo.TabIndex = 1;
             // 
             // LavelUrlImagen
             // 
@@ -246,7 +246,7 @@
             this.Pbox.TabIndex = 34;
             this.Pbox.TabStop = false;
             // 
-            // Modificar
+            // ModificarArticulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -269,7 +269,7 @@
             this.Controls.Add(this.LevelDescripcion);
             this.Controls.Add(this.LevelNombre);
             this.Controls.Add(this.LabelCodigo);
-            this.Name = "Modificar";
+            this.Name = "ModificarArticulo";
             this.Text = "Modificar";
             this.Load += new System.EventHandler(this.Modificar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Pbox)).EndInit();

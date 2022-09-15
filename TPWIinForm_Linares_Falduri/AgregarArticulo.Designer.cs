@@ -121,7 +121,7 @@
             this.TxCodigo.Location = new System.Drawing.Point(290, 19);
             this.TxCodigo.Name = "TxCodigo";
             this.TxCodigo.Size = new System.Drawing.Size(231, 31);
-            this.TxCodigo.TabIndex = 5;
+            this.TxCodigo.TabIndex = 1;
             // 
             // TxImagen
             // 
@@ -130,7 +130,7 @@
             this.TxImagen.Location = new System.Drawing.Point(290, 205);
             this.TxImagen.Name = "TxImagen";
             this.TxImagen.Size = new System.Drawing.Size(231, 31);
-            this.TxImagen.TabIndex = 6;
+            this.TxImagen.TabIndex = 5;
             // 
             // TxPrecio
             // 
@@ -139,7 +139,7 @@
             this.TxPrecio.Location = new System.Drawing.Point(290, 156);
             this.TxPrecio.Name = "TxPrecio";
             this.TxPrecio.Size = new System.Drawing.Size(231, 31);
-            this.TxPrecio.TabIndex = 7;
+            this.TxPrecio.TabIndex = 4;
             // 
             // TxDesc
             // 
@@ -148,7 +148,7 @@
             this.TxDesc.Location = new System.Drawing.Point(290, 108);
             this.TxDesc.Name = "TxDesc";
             this.TxDesc.Size = new System.Drawing.Size(231, 31);
-            this.TxDesc.TabIndex = 8;
+            this.TxDesc.TabIndex = 3;
             // 
             // TxNombre
             // 
@@ -157,7 +157,7 @@
             this.TxNombre.Location = new System.Drawing.Point(290, 62);
             this.TxNombre.Name = "TxNombre";
             this.TxNombre.Size = new System.Drawing.Size(233, 31);
-            this.TxNombre.TabIndex = 9;
+            this.TxNombre.TabIndex = 2;
             // 
             // BotonAgregarArticulo
             // 
@@ -167,7 +167,7 @@
             this.BotonAgregarArticulo.Location = new System.Drawing.Point(554, 86);
             this.BotonAgregarArticulo.Name = "BotonAgregarArticulo";
             this.BotonAgregarArticulo.Size = new System.Drawing.Size(138, 53);
-            this.BotonAgregarArticulo.TabIndex = 10;
+            this.BotonAgregarArticulo.TabIndex = 8;
             this.BotonAgregarArticulo.Text = "Agregar";
             this.BotonAgregarArticulo.UseVisualStyleBackColor = false;
             this.BotonAgregarArticulo.Click += new System.EventHandler(this.BotonAgregarArticulo_Click);
@@ -188,7 +188,7 @@
             this.BotonSalir.Location = new System.Drawing.Point(554, 255);
             this.BotonSalir.Name = "BotonSalir";
             this.BotonSalir.Size = new System.Drawing.Size(150, 57);
-            this.BotonSalir.TabIndex = 12;
+            this.BotonSalir.TabIndex = 9;
             this.BotonSalir.Text = "Cancelar/Volver";
             this.BotonSalir.UseVisualStyleBackColor = false;
             this.BotonSalir.Click += new System.EventHandler(this.BotonSalir_Click);
@@ -227,7 +227,7 @@
             this.CboMarca.Location = new System.Drawing.Point(290, 245);
             this.CboMarca.Name = "CboMarca";
             this.CboMarca.Size = new System.Drawing.Size(229, 28);
-            this.CboMarca.TabIndex = 15;
+            this.CboMarca.TabIndex = 6;
             // 
             // CboCategoria
             // 
@@ -237,7 +237,7 @@
             this.CboCategoria.Location = new System.Drawing.Point(290, 287);
             this.CboCategoria.Name = "CboCategoria";
             this.CboCategoria.Size = new System.Drawing.Size(229, 28);
-            this.CboCategoria.TabIndex = 16;
+            this.CboCategoria.TabIndex = 7;
             // 
             // pictureBox1
             // 

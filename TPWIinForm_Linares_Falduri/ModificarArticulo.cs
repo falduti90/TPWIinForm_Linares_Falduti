@@ -13,15 +13,15 @@ using System.Windows.Forms;
 
 namespace TPWIinForm_Linares_Falduri
 {
-    public partial class Modificar : Form
+    public partial class ModificarArticulo : Form
     {
         private Articulo Obj;
         
-        public Modificar()
+        public ModificarArticulo()
         {
             InitializeComponent();
         }
-        public Modificar(Articulo Articulo_Actual)
+        public ModificarArticulo(Articulo Articulo_Actual)
         {
             Obj = Articulo_Actual;
             InitializeComponent();
@@ -73,7 +73,7 @@ namespace TPWIinForm_Linares_Falduri
                 Art.Marca = (Marca)CboMarca.SelectedItem;
                 Art.Categoria = (Categoria)CboCategoria.SelectedItem;
 
-                articulo_Negocio.Modificar_Articulo(Art);
+                articulo_Negocio.Modificar_Articulo(Art, Art.ArticuloId);
 
                 MessageBox.Show("El Articulo fue modificado con exito");
 

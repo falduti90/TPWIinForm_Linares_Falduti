@@ -16,7 +16,7 @@ namespace TPWIinForm_Linares_Falduri
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Inicio());
+            Application.Run(new Bienvenida());
         }
     }
 }

@@ -30,17 +30,22 @@ namespace TPWIinForm_Linares_Falduri
 
         private void PaginaPrincipal_Load(object sender, EventArgs e)
         {
+            Articulo_Negocio Articulos = new Articulo_Negocio();
+
             LevelSaludo.Text += Nombre_Usuario;
+           
+            try
+            {
+                ListaArticulos = Articulos.ListarArticulos();
 
-            Articulo_Negocio negocio = new Articulo_Negocio();
-
-            ListaArticulos = negocio.ListarArticulos();
-            
-            Dgv_Ventas.DataSource = ListaArticulos;
-            pbxArticulos.Load(ListaArticulos[0].URLImagen);
-            Dgv_Ventas.Columns["URLImagen"].Visible = false;
-            
-            OcultarColumnas();
+                Dgv_Ventas.DataSource = ListaArticulos;
+                OcultarColumnas();
+                SubirImagen(ListaArticulos[0].URLImagen);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void Btn_Exit_Click(object sender, EventArgs e)
@@ -59,7 +64,7 @@ namespace TPWIinForm_Linares_Falduri
             Articulo articulo = new Articulo();
             articulo = (Articulo)Dgv_Ventas.CurrentRow.DataBoundItem;
 
-            Modificar modificar = new Modificar(articulo);
+            ModificarArticulo modificar = new ModificarArticulo(articulo);
             modificar.ShowDialog();
         }
 
@@ -88,14 +93,6 @@ namespace TPWIinForm_Linares_Falduri
         {
             Dgv_Ventas.Columns["URLImagen"].Visible = false;
             Dgv_Ventas.Columns["ArticuloId"].Visible = false;
-            //Dgv_Ventas.Columns["CategoriaId"].Visible = false;
-            //Dgv_Ventas.Columns["MarcaId"].Visible = false;
-        }
-
-        private void Dgv_Ventas_SelectionChanged(object sender, EventArgs e)
-        {
-            Articulo Obj = (Articulo)Dgv_Ventas.CurrentRow.DataBoundItem;
-            SubirImagen(Obj.URLImagen);
         }
 
         private void SubirImagen(string NuevaImagen)
@@ -110,5 +107,13 @@ namespace TPWIinForm_Linares_Falduri
             }
         }
 
+        private void Dgv_Ventas_SelectionChanged_1(object sender, EventArgs e)
+        {
+            if (Dgv_Ventas.CurrentRow != null)
+            {
+                Articulo Obj = (Articulo)Dgv_Ventas.CurrentRow.DataBoundItem;
+                SubirImagen(Obj.URLImagen);
+            }
+        }
     }
 }

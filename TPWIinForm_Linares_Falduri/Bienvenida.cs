@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace TPWIinForm_Linares_Falduri
 {
-    public partial class Inicio : Form
+    public partial class Bienvenida : Form
     {
 
-        public Inicio()
+        public Bienvenida()
         {
             InitializeComponent();
         }
@@ -44,7 +44,6 @@ namespace TPWIinForm_Linares_Falduri
                 }
                 else { errorProvider1.SetError(TxtNombre, "Debe introducir su nombre"); }
             }
-            //btnSolicitarPrestamo.Enabled = false;
             TxtNombre.Focus();
         }
         private void TextBoxNombre_TextChanged(object sender, EventArgs e)
