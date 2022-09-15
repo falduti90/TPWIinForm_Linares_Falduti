@@ -30,22 +30,7 @@ namespace TPWIinForm_Linares_Falduri
 
         private void PaginaPrincipal_Load(object sender, EventArgs e)
         {
-            Articulo_Negocio Articulos = new Articulo_Negocio();
-
-            LevelSaludo.Text += Nombre_Usuario;
-           
-            try
-            {
-                ListaArticulos = Articulos.ListarArticulos();
-
-                Dgv_Ventas.DataSource = ListaArticulos;
-                OcultarColumnas();
-                SubirImagen(ListaArticulos[0].URLImagen);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            this.CargarPagina();
         }
 
         private void Btn_Exit_Click(object sender, EventArgs e)
@@ -55,38 +40,44 @@ namespace TPWIinForm_Linares_Falduri
 
         private void Btn_Agregar_Click(object sender, EventArgs e)
         {
-            AgregarArticulo Alta = new AgregarArticulo();
-            Alta.ShowDialog();
+            AgregarArticulo NuevoArticoForm = new AgregarArticulo();
+            NuevoArticoForm.ShowDialog();
+
+            this.CargarPagina();
         }
 
         private void BtnModificar_Click_1(object sender, EventArgs e)
         {
             Articulo articulo = new Articulo();
-            articulo = (Articulo)Dgv_Ventas.CurrentRow.DataBoundItem;
 
-            ModificarArticulo modificar = new ModificarArticulo(articulo);
-            modificar.ShowDialog();
+            articulo = (Articulo)Dgv_Ventas.CurrentRow.DataBoundItem;
+            ModificarArticulo ModificarArticuloForm = new ModificarArticulo(articulo);
+            ModificarArticuloForm.ShowDialog();
+
+            this.CargarPagina();
         }
 
         private void BtnELiminar_Click(object sender, EventArgs e)
         {
-            Articulo_Negocio negocio = new Articulo_Negocio();
-            Articulo seleccionado;
+            Articulo_Negocio Articulo = new Articulo_Negocio();
+            Articulo ArticuloSeleccionado;
             try
             {
                 DialogResult respuesta = MessageBox.Show("¿De verdad querés eliminarlo?", "Eliminando", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                
                 if (respuesta == DialogResult.Yes)
                 {
-                    seleccionado = (Articulo)Dgv_Ventas.CurrentRow.DataBoundItem;
+                    ArticuloSeleccionado = (Articulo)Dgv_Ventas.CurrentRow.DataBoundItem;
 
-                    negocio.EliminarFisico(seleccionado.ArticuloId);
+                    Articulo.EliminarFisico(ArticuloSeleccionado.ArticuloId);
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
             }
+
+            this.CargarPagina();
         }
 
         private void OcultarColumnas()
@@ -113,6 +104,26 @@ namespace TPWIinForm_Linares_Falduri
             {
                 Articulo Obj = (Articulo)Dgv_Ventas.CurrentRow.DataBoundItem;
                 SubirImagen(Obj.URLImagen);
+            }
+        }
+
+        private void CargarPagina()
+        {
+            Articulo_Negocio Articulos = new Articulo_Negocio();
+
+            LevelSaludo.Text += Nombre_Usuario;
+
+            try
+            {
+                ListaArticulos = Articulos.ListarArticulos();
+
+                Dgv_Ventas.DataSource = ListaArticulos;
+                OcultarColumnas();
+                SubirImagen(ListaArticulos[0].URLImagen);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
     }

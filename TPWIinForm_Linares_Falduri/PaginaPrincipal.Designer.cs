@@ -75,9 +75,9 @@
             // 
             // BtnELiminar
             // 
-            this.BtnELiminar.Location = new System.Drawing.Point(377, 567);
+            this.BtnELiminar.Location = new System.Drawing.Point(338, 559);
             this.BtnELiminar.Name = "BtnELiminar";
-            this.BtnELiminar.Size = new System.Drawing.Size(75, 23);
+            this.BtnELiminar.Size = new System.Drawing.Size(157, 38);
             this.BtnELiminar.TabIndex = 11;
             this.BtnELiminar.Text = "Eliminar";
             this.BtnELiminar.UseVisualStyleBackColor = true;
@@ -85,9 +85,9 @@
             // 
             // BtnModificar
             // 
-            this.BtnModificar.Location = new System.Drawing.Point(220, 567);
+            this.BtnModificar.Location = new System.Drawing.Point(175, 557);
             this.BtnModificar.Name = "BtnModificar";
-            this.BtnModificar.Size = new System.Drawing.Size(75, 23);
+            this.BtnModificar.Size = new System.Drawing.Size(157, 38);
             this.BtnModificar.TabIndex = 10;
             this.BtnModificar.Text = "Modificar";
             this.BtnModificar.UseVisualStyleBackColor = true;
