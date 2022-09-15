@@ -56,5 +56,15 @@ namespace TPWIinForm_Linares_Falduri
 
             }
         }
+
+        private void BtnModificar_Click(object sender, EventArgs e)
+        {
+            Articulo articulo = new Articulo();
+            articulo = (Articulo)Dgv_Ventas.CurrentRow.DataBoundItem;
+
+            Modificar modificar = new Modificar(articulo);
+            modificar.ShowDialog();
+
+        }
     }
 }

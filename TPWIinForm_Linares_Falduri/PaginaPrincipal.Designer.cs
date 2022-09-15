@@ -31,7 +31,6 @@
             this.LevelSaludo = new System.Windows.Forms.Label();
             this.Btn_Agregar = new System.Windows.Forms.Button();
             this.Btn_Modificar = new System.Windows.Forms.Button();
-            this.Btn_Eliminar = new System.Windows.Forms.Button();
             this.Btn_Exit = new System.Windows.Forms.Button();
             this.BtnListado = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -66,21 +65,10 @@
             this.Btn_Modificar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Modificar.Location = new System.Drawing.Point(12, 233);
             this.Btn_Modificar.Name = "Btn_Modificar";
-            this.Btn_Modificar.Size = new System.Drawing.Size(157, 38);
+            this.Btn_Modificar.Size = new System.Drawing.Size(197, 38);
             this.Btn_Modificar.TabIndex = 4;
-            this.Btn_Modificar.Text = "Modificar";
+            this.Btn_Modificar.Text = "Modificar / Eliminar";
             this.Btn_Modificar.UseVisualStyleBackColor = false;
-            // 
-            // Btn_Eliminar
-            // 
-            this.Btn_Eliminar.BackColor = System.Drawing.Color.IndianRed;
-            this.Btn_Eliminar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Eliminar.Location = new System.Drawing.Point(12, 290);
-            this.Btn_Eliminar.Name = "Btn_Eliminar";
-            this.Btn_Eliminar.Size = new System.Drawing.Size(157, 38);
-            this.Btn_Eliminar.TabIndex = 5;
-            this.Btn_Eliminar.Text = "Eliminar";
-            this.Btn_Eliminar.UseVisualStyleBackColor = false;
             // 
             // Btn_Exit
             // 
@@ -124,7 +112,6 @@
             this.ClientSize = new System.Drawing.Size(1082, 453);
             this.Controls.Add(this.BtnListado);
             this.Controls.Add(this.Btn_Exit);
-            this.Controls.Add(this.Btn_Eliminar);
             this.Controls.Add(this.Btn_Modificar);
             this.Controls.Add(this.Btn_Agregar);
             this.Controls.Add(this.LevelSaludo);
@@ -146,7 +133,6 @@
         private System.Windows.Forms.Label LevelSaludo;
         private System.Windows.Forms.Button Btn_Agregar;
         private System.Windows.Forms.Button Btn_Modificar;
-        private System.Windows.Forms.Button Btn_Eliminar;
         private System.Windows.Forms.Button Btn_Exit;
         private System.Windows.Forms.Button BtnListado;
         private System.Windows.Forms.PictureBox pictureBox1;

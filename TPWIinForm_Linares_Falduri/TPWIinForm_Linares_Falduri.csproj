@@ -62,6 +62,12 @@
     <Compile Include="ListadoGeneral.Designer.cs">
       <DependentUpon>ListadoGeneral.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modificar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modificar.Designer.cs">
+      <DependentUpon>Modificar.cs</DependentUpon>
+    </Compile>
     <Compile Include="PaginaPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,6 +90,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ListadoGeneral.resx">
       <DependentUpon>ListadoGeneral.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modificar.resx">
+      <DependentUpon>Modificar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PaginaPrincipal.resx">
       <DependentUpon>PaginaPrincipal.cs</DependentUpon>
