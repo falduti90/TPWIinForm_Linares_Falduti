@@ -66,5 +66,26 @@ namespace TPWIinForm_Linares_Falduri
             modificar.ShowDialog();
 
         }
+
+        private void BtnELiminar_Click(object sender, EventArgs e)
+        {
+            Articulo_Negocio negocio = new Articulo_Negocio();
+            Articulo seleccionado;
+
+            try
+            {
+                DialogResult respuesta = MessageBox.Show("¿De verdad querés eliminarlo?", "Eliminando", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (respuesta == DialogResult.Yes)
+                {
+                    seleccionado = (Articulo)Dgv_Ventas.CurrentRow.DataBoundItem;
+
+                    negocio.EliminarFisico(seleccionado.ArticuloId);                        
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
     }
 }

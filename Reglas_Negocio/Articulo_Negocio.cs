@@ -87,14 +87,14 @@ namespace Reglas_Negocio
             }
         }
 
-        public void EliminarFisico(Articulo ArticuloEliminar)
+        public void EliminarFisico(int id)
         {
             Acceso_A_Db DataBase = new Acceso_A_Db();
 
             try
             {
-                DataBase.setearConsulta("delete from CATALOGO_DB where id=@id"); //consulta DELETE sql NO OLVIDAR WHERE
-                DataBase.setearParametro("@id", ArticuloEliminar.ArticuloId);
+                DataBase.setearConsulta("delete from CATALOGO_DB where id=@id");
+                DataBase.setearParametro("@id", id);
                 DataBase.ejecutarAccion();
             }
             catch (Exception ex)

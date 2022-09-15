@@ -75,6 +75,7 @@
             this.BtnELiminar.TabIndex = 5;
             this.BtnELiminar.Text = "Eliminar";
             this.BtnELiminar.UseVisualStyleBackColor = true;
+            this.BtnELiminar.Click += new System.EventHandler(this.BtnELiminar_Click);
             // 
             // ListadoGeneral
             // 
