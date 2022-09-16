@@ -15,7 +15,7 @@ namespace TPWIinForm_Linares_Falduri
 {
     public partial class ModificarArticulo : Form
     {
-        private Articulo Obj;
+        private Articulo Obj = null;
         
         public ModificarArticulo()
         {
@@ -23,7 +23,7 @@ namespace TPWIinForm_Linares_Falduri
         }
         public ModificarArticulo(Articulo Articulo_Actual)
         {
-            Obj = Articulo_Actual;
+            this.Obj = Articulo_Actual;
             InitializeComponent();
         }
 
@@ -45,6 +45,7 @@ namespace TPWIinForm_Linares_Falduri
                 TxDesc.Text = Obj.Descripcion;
                 TxNombre.Text = Obj.Nombre;
                 TxPrecio.Text = Obj.Precio.ToString();
+                TxImagen.Text = Obj.URLImagen;
 
                 CboMarca.SelectedValue = Obj.Marca.MarcaId;
                 CboCategoria.SelectedValue = Obj.Categoria.CategoriaId;
@@ -64,6 +65,8 @@ namespace TPWIinForm_Linares_Falduri
 
             try
             {
+                Art.ArticuloId = Obj.ArticuloId;
+                
                 Art.Codigo = TxCodigo.Text;
                 Art.Nombre = TxNombre.Text;
                 Art.Descripcion = TxDesc.Text;

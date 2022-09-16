@@ -125,6 +125,7 @@ namespace Reglas_Negocio
                 DataBase.setearParametro("@IdMarca", NuevoArticulo.Marca.MarcaId);
                 DataBase.setearParametro("@IdDCategoria", NuevoArticulo.Categoria.CategoriaId);
                 DataBase.setearParametro("@Precio", NuevoArticulo.Precio);
+                
                 DataBase.setearParametro("@Id", IdArticulo);
 
                 DataBase.ejecutarAccion();
