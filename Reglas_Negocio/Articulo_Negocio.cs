@@ -151,21 +151,21 @@ namespace Reglas_Negocio
                 switch (campo)
                 {
                     case "Precio":
-                        if (criterio == "Mayor a >") Consulta += "ART.PRECIO >" + filtro;
-                        if (criterio == "Mayor a <") Consulta += "ART.PRECIO <" + filtro;
-                        if (criterio == "Igual a =") Consulta += "ART.PRECIO =" + filtro;
+                        if (criterio == "Mayor a ") Consulta += "ART.PRECIO >" + filtro;
+                        if (criterio == "Mayor a ") Consulta += "ART.PRECIO <" + filtro;
+                        if (criterio == "Igual a ") Consulta += "ART.PRECIO =" + filtro;
                         break;
 
                     case "Nombre":
-                        if (criterio == "Comienza Con") Consulta += "ART.NOMBRE '" + filtro + "%' ";
-                        if (criterio == "Termina con ") Consulta += "ART.NOMBRE '%" + filtro + "'";
-                        if (criterio == "Contine...  ") Consulta += "ART.NOMBRE '%" + filtro + "%'";
+                        if (criterio == "Comienza Con") Consulta += "ART.NOMBRE  like'" + filtro + "%' ";
+                        if (criterio == "Termina con ") Consulta += "ART.NOMBRE like '%" + filtro + "'";
+                        if (criterio == "Contine") Consulta += "ART.NOMBRE like '%" + filtro + "%'";
                         break;
 
                     case "Descripcion":
-                        if (criterio == "Comienza con") Consulta += "MAR.DESCRIPCION  '" + filtro + "%' ";
-                        if (criterio == "Termina con") Consulta += "MAR.DESCRIPCION  '%" + filtro + "'";
-                        if (criterio == "Contine...") Consulta += "MAR.DESCRIPCION  '%" + filtro + "%'";
+                        if (criterio == "Comienza con") Consulta += "MAR.DESCRIPCION  like '" + filtro + "%' ";
+                        if (criterio == "Termina con") Consulta += "MAR.DESCRIPCION  like '%" + filtro + "'";
+                        if (criterio == "Contine") Consulta += "MAR.DESCRIPCION  like '%" + filtro + "%'";
                         break;
 
                     default:

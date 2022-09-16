@@ -32,8 +32,8 @@ namespace TPWIinForm_Linares_Falduri
         {
             this.CargarPagina();
 
+            CbxCampo.Items.Add("Precio");
             CbxCampo.Items.Add("Nombre");
-            CbxCampo.Items.Add("Pecio");
             CbxCampo.Items.Add("Descripcion");
 
         }
@@ -156,9 +156,9 @@ namespace TPWIinForm_Linares_Falduri
             if (Opcion == "Precio")
             {
                 CbxCriterio.Items.Clear();
-                CbxCriterio.Items.Add("Mayor a >");
-                CbxCriterio.Items.Add("Menor a <");
-                CbxCriterio.Items.Add("Igual a =");
+                CbxCriterio.Items.Add("Mayor a ");
+                CbxCriterio.Items.Add("Menor a ");
+                CbxCriterio.Items.Add("Igual a ");
 
             }
             else
@@ -166,7 +166,7 @@ namespace TPWIinForm_Linares_Falduri
                 CbxCriterio.Items.Clear();
                 CbxCriterio.Items.Add("Comienza con");
                 CbxCriterio.Items.Add("Termina con");
-                CbxCriterio.Items.Add("Contine... ");
+                CbxCriterio.Items.Add("Contine");
             }
         }
 
