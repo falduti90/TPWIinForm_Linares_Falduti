@@ -35,6 +35,8 @@
             this.BtnModificar = new System.Windows.Forms.Button();
             this.pbxArticulos = new System.Windows.Forms.PictureBox();
             this.Dgv_Ventas = new System.Windows.Forms.DataGridView();
+            this.LabelBusqueda_avanzada = new System.Windows.Forms.Label();
+            this.TxBusqueda = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbxArticulos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_Ventas)).BeginInit();
             this.SuspendLayout();
@@ -115,12 +117,31 @@
             this.Dgv_Ventas.TabIndex = 8;
             this.Dgv_Ventas.SelectionChanged += new System.EventHandler(this.Dgv_Ventas_SelectionChanged_1);
             // 
+            // LabelBusqueda_avanzada
+            // 
+            this.LabelBusqueda_avanzada.AutoSize = true;
+            this.LabelBusqueda_avanzada.Location = new System.Drawing.Point(24, 468);
+            this.LabelBusqueda_avanzada.Name = "LabelBusqueda_avanzada";
+            this.LabelBusqueda_avanzada.Size = new System.Drawing.Size(166, 20);
+            this.LabelBusqueda_avanzada.TabIndex = 12;
+            this.LabelBusqueda_avanzada.Text = "Busqueda Avanzada";
+            // 
+            // TxBusqueda
+            // 
+            this.TxBusqueda.Location = new System.Drawing.Point(161, 468);
+            this.TxBusqueda.Name = "TxBusqueda";
+            this.TxBusqueda.Size = new System.Drawing.Size(318, 22);
+            this.TxBusqueda.TabIndex = 13;
+            this.TxBusqueda.TextChanged += new System.EventHandler(this.TxBusqueda_TextChanged);
+            // 
             // PaginaPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(1182, 653);
+            this.Controls.Add(this.TxBusqueda);
+            this.Controls.Add(this.LabelBusqueda_avanzada);
             this.Controls.Add(this.BtnELiminar);
             this.Controls.Add(this.BtnModificar);
             this.Controls.Add(this.pbxArticulos);
@@ -150,5 +171,7 @@
         private System.Windows.Forms.Button BtnModificar;
         private System.Windows.Forms.PictureBox pbxArticulos;
         private System.Windows.Forms.DataGridView Dgv_Ventas;
+        private System.Windows.Forms.Label LabelBusqueda_avanzada;
+        private System.Windows.Forms.TextBox TxBusqueda;
     }
 }

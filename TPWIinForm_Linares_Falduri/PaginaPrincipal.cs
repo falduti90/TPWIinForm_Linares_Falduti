@@ -125,5 +125,24 @@ namespace TPWIinForm_Linares_Falduri
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void TxBusqueda_TextChanged(object sender, EventArgs e)
+        {
+            List<Articulo> ListaAvanzada;
+            string Filtro= TxBusqueda.Text;
+
+            if (Filtro.Length >= 3)
+            {
+               ListaAvanzada = ListaArticulos.FindAll(x => x.Nombre.ToUpper().Contains(Filtro.ToUpper()) || x.Codigo.ToUpper().Contains(Filtro.ToUpper()));
+            }
+            else
+            {
+                ListaAvanzada = ListaArticulos;
+            }
+
+            Dgv_Ventas.DataSource = null;
+            Dgv_Ventas.DataSource = ListaAvanzada;
+            OcultarColumnas();
+        }
     }
 }

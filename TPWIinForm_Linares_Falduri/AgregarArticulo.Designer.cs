@@ -55,7 +55,7 @@
             this.LabelCodigo.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.LabelCodigo.Font = new System.Drawing.Font("Microsoft YaHei", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LabelCodigo.ForeColor = System.Drawing.SystemColors.Info;
-            this.LabelCodigo.Location = new System.Drawing.Point(179, 20);
+            this.LabelCodigo.Location = new System.Drawing.Point(56, 23);
             this.LabelCodigo.Name = "LabelCodigo";
             this.LabelCodigo.Size = new System.Drawing.Size(94, 30);
             this.LabelCodigo.TabIndex = 0;
@@ -68,7 +68,7 @@
             this.LevelNombre.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.LevelNombre.Font = new System.Drawing.Font("Microsoft YaHei", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LevelNombre.ForeColor = System.Drawing.SystemColors.Info;
-            this.LevelNombre.Location = new System.Drawing.Point(167, 62);
+            this.LevelNombre.Location = new System.Drawing.Point(44, 65);
             this.LevelNombre.Name = "LevelNombre";
             this.LevelNombre.Size = new System.Drawing.Size(106, 30);
             this.LevelNombre.TabIndex = 1;
@@ -81,7 +81,7 @@
             this.LevelDescripcion.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.LevelDescripcion.Font = new System.Drawing.Font("Microsoft YaHei", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LevelDescripcion.ForeColor = System.Drawing.SystemColors.Info;
-            this.LevelDescripcion.Location = new System.Drawing.Point(129, 109);
+            this.LevelDescripcion.Location = new System.Drawing.Point(6, 112);
             this.LevelDescripcion.Name = "LevelDescripcion";
             this.LevelDescripcion.Size = new System.Drawing.Size(144, 30);
             this.LevelDescripcion.TabIndex = 2;
@@ -94,7 +94,7 @@
             this.LavelPrecio.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.LavelPrecio.Font = new System.Drawing.Font("Microsoft YaHei", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LavelPrecio.ForeColor = System.Drawing.SystemColors.Info;
-            this.LavelPrecio.Location = new System.Drawing.Point(171, 157);
+            this.LavelPrecio.Location = new System.Drawing.Point(48, 160);
             this.LavelPrecio.Name = "LavelPrecio";
             this.LavelPrecio.Size = new System.Drawing.Size(102, 30);
             this.LavelPrecio.TabIndex = 3;
@@ -107,7 +107,7 @@
             this.LavelUrlImagen.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.LavelUrlImagen.Font = new System.Drawing.Font("Microsoft YaHei", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LavelUrlImagen.ForeColor = System.Drawing.SystemColors.Info;
-            this.LavelUrlImagen.Location = new System.Drawing.Point(144, 205);
+            this.LavelUrlImagen.Location = new System.Drawing.Point(21, 208);
             this.LavelUrlImagen.Name = "LavelUrlImagen";
             this.LavelUrlImagen.Size = new System.Drawing.Size(129, 30);
             this.LavelUrlImagen.TabIndex = 4;
@@ -118,7 +118,7 @@
             // 
             this.TxCodigo.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.TxCodigo.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxCodigo.Location = new System.Drawing.Point(290, 19);
+            this.TxCodigo.Location = new System.Drawing.Point(167, 22);
             this.TxCodigo.Name = "TxCodigo";
             this.TxCodigo.Size = new System.Drawing.Size(231, 31);
             this.TxCodigo.TabIndex = 1;
@@ -127,7 +127,7 @@
             // 
             this.TxImagen.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.TxImagen.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxImagen.Location = new System.Drawing.Point(290, 205);
+            this.TxImagen.Location = new System.Drawing.Point(167, 208);
             this.TxImagen.Name = "TxImagen";
             this.TxImagen.Size = new System.Drawing.Size(231, 31);
             this.TxImagen.TabIndex = 5;
@@ -136,7 +136,7 @@
             // 
             this.TxPrecio.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.TxPrecio.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxPrecio.Location = new System.Drawing.Point(290, 156);
+            this.TxPrecio.Location = new System.Drawing.Point(167, 159);
             this.TxPrecio.Name = "TxPrecio";
             this.TxPrecio.Size = new System.Drawing.Size(231, 31);
             this.TxPrecio.TabIndex = 4;
@@ -145,7 +145,7 @@
             // 
             this.TxDesc.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.TxDesc.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxDesc.Location = new System.Drawing.Point(290, 108);
+            this.TxDesc.Location = new System.Drawing.Point(167, 111);
             this.TxDesc.Name = "TxDesc";
             this.TxDesc.Size = new System.Drawing.Size(231, 31);
             this.TxDesc.TabIndex = 3;
@@ -154,7 +154,7 @@
             // 
             this.TxNombre.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.TxNombre.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxNombre.Location = new System.Drawing.Point(290, 62);
+            this.TxNombre.Location = new System.Drawing.Point(167, 65);
             this.TxNombre.Name = "TxNombre";
             this.TxNombre.Size = new System.Drawing.Size(233, 31);
             this.TxNombre.TabIndex = 2;
@@ -164,9 +164,9 @@
             this.BotonAgregarArticulo.BackColor = System.Drawing.SystemColors.InfoText;
             this.BotonAgregarArticulo.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BotonAgregarArticulo.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.BotonAgregarArticulo.Location = new System.Drawing.Point(554, 86);
+            this.BotonAgregarArticulo.Location = new System.Drawing.Point(172, 346);
             this.BotonAgregarArticulo.Name = "BotonAgregarArticulo";
-            this.BotonAgregarArticulo.Size = new System.Drawing.Size(138, 53);
+            this.BotonAgregarArticulo.Size = new System.Drawing.Size(228, 34);
             this.BotonAgregarArticulo.TabIndex = 8;
             this.BotonAgregarArticulo.Text = "Agregar";
             this.BotonAgregarArticulo.UseVisualStyleBackColor = false;
@@ -174,7 +174,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(374, 300);
+            this.button1.Location = new System.Drawing.Point(251, 303);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(8, 8);
             this.button1.TabIndex = 11;
@@ -185,7 +185,7 @@
             // 
             this.BotonSalir.BackColor = System.Drawing.Color.Orchid;
             this.BotonSalir.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BotonSalir.Location = new System.Drawing.Point(554, 255);
+            this.BotonSalir.Location = new System.Drawing.Point(561, 384);
             this.BotonSalir.Name = "BotonSalir";
             this.BotonSalir.Size = new System.Drawing.Size(150, 57);
             this.BotonSalir.TabIndex = 9;
@@ -199,7 +199,7 @@
             this.LabelMarca.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.LabelMarca.Font = new System.Drawing.Font("Microsoft YaHei", 13.8F);
             this.LabelMarca.ForeColor = System.Drawing.SystemColors.Info;
-            this.LabelMarca.Location = new System.Drawing.Point(191, 243);
+            this.LabelMarca.Location = new System.Drawing.Point(68, 246);
             this.LabelMarca.Name = "LabelMarca";
             this.LabelMarca.Size = new System.Drawing.Size(82, 30);
             this.LabelMarca.TabIndex = 13;
@@ -212,7 +212,7 @@
             this.LabelCategoria.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.LabelCategoria.Font = new System.Drawing.Font("Microsoft YaHei", 13.8F);
             this.LabelCategoria.ForeColor = System.Drawing.SystemColors.Info;
-            this.LabelCategoria.Location = new System.Drawing.Point(152, 282);
+            this.LabelCategoria.Location = new System.Drawing.Point(29, 285);
             this.LabelCategoria.Name = "LabelCategoria";
             this.LabelCategoria.Size = new System.Drawing.Size(121, 30);
             this.LabelCategoria.TabIndex = 14;
@@ -224,7 +224,7 @@
             this.CboMarca.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.CboMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CboMarca.FormattingEnabled = true;
-            this.CboMarca.Location = new System.Drawing.Point(290, 245);
+            this.CboMarca.Location = new System.Drawing.Point(167, 248);
             this.CboMarca.Name = "CboMarca";
             this.CboMarca.Size = new System.Drawing.Size(229, 28);
             this.CboMarca.TabIndex = 6;
@@ -234,7 +234,7 @@
             this.CboCategoria.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.CboCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CboCategoria.FormattingEnabled = true;
-            this.CboCategoria.Location = new System.Drawing.Point(290, 287);
+            this.CboCategoria.Location = new System.Drawing.Point(167, 290);
             this.CboCategoria.Name = "CboCategoria";
             this.CboCategoria.Size = new System.Drawing.Size(229, 28);
             this.CboCategoria.TabIndex = 7;
@@ -242,7 +242,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::TPWIinForm_Linares_Falduri.Properties.Resources.Flyer_evento_música_dj_discoteca_moderna_violeta;
-            this.pictureBox1.Location = new System.Drawing.Point(-5, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(1, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(738, 458);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
