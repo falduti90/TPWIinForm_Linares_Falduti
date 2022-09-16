@@ -99,5 +99,10 @@ namespace TPWIinForm_Linares_Falduri
                 Pbox.Load("https://efectocolibri.com/wp-content/uploads/2021/01/placeholder.png");
             }
         }
+
+        private void BotonSalir_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

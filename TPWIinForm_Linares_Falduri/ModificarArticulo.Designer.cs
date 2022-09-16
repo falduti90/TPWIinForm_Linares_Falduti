@@ -105,6 +105,7 @@
             this.BotonSalir.TabIndex = 9;
             this.BotonSalir.Text = "Cancelar/Volver";
             this.BotonSalir.UseVisualStyleBackColor = false;
+            this.BotonSalir.Click += new System.EventHandler(this.BotonSalir_Click);
             // 
             // button1
             // 

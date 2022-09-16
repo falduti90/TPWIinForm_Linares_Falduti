@@ -53,7 +53,6 @@ namespace TPWIinForm_Linares_Falduri
             articulo = (Articulo)Dgv_Ventas.CurrentRow.DataBoundItem;
             ModificarArticulo ModificarArticuloForm = new ModificarArticulo(articulo);
             ModificarArticuloForm.ShowDialog();
-
             this.CargarPagina();
         }
 
