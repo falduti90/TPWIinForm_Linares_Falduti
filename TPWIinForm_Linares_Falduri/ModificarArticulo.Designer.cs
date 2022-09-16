@@ -57,7 +57,7 @@
             this.CboCategoria.Location = new System.Drawing.Point(274, 345);
             this.CboCategoria.Name = "CboCategoria";
             this.CboCategoria.Size = new System.Drawing.Size(229, 28);
-            this.CboCategoria.TabIndex = 7;
+            this.CboCategoria.TabIndex = 6;
             // 
             // CboMarca
             // 
@@ -67,7 +67,7 @@
             this.CboMarca.Location = new System.Drawing.Point(274, 303);
             this.CboMarca.Name = "CboMarca";
             this.CboMarca.Size = new System.Drawing.Size(229, 28);
-            this.CboMarca.TabIndex = 6;
+            this.CboMarca.TabIndex = 5;
             // 
             // LabelCategoria
             // 
@@ -102,7 +102,7 @@
             this.BotonSalir.Location = new System.Drawing.Point(718, 381);
             this.BotonSalir.Name = "BotonSalir";
             this.BotonSalir.Size = new System.Drawing.Size(150, 57);
-            this.BotonSalir.TabIndex = 9;
+            this.BotonSalir.TabIndex = 0;
             this.BotonSalir.Text = "Cancelar/Volver";
             this.BotonSalir.UseVisualStyleBackColor = false;
             this.BotonSalir.Click += new System.EventHandler(this.BotonSalir_Click);
@@ -136,7 +136,7 @@
             this.TxNombre.Location = new System.Drawing.Point(274, 120);
             this.TxNombre.Name = "TxNombre";
             this.TxNombre.Size = new System.Drawing.Size(233, 31);
-            this.TxNombre.TabIndex = 2;
+            this.TxNombre.TabIndex = 1;
             // 
             // TxDesc
             // 
@@ -145,7 +145,7 @@
             this.TxDesc.Location = new System.Drawing.Point(274, 166);
             this.TxDesc.Name = "TxDesc";
             this.TxDesc.Size = new System.Drawing.Size(231, 31);
-            this.TxDesc.TabIndex = 3;
+            this.TxDesc.TabIndex = 2;
             // 
             // TxPrecio
             // 
@@ -154,7 +154,7 @@
             this.TxPrecio.Location = new System.Drawing.Point(274, 214);
             this.TxPrecio.Name = "TxPrecio";
             this.TxPrecio.Size = new System.Drawing.Size(231, 31);
-            this.TxPrecio.TabIndex = 4;
+            this.TxPrecio.TabIndex = 3;
             // 
             // TxImagen
             // 
@@ -163,7 +163,7 @@
             this.TxImagen.Location = new System.Drawing.Point(274, 263);
             this.TxImagen.Name = "TxImagen";
             this.TxImagen.Size = new System.Drawing.Size(231, 31);
-            this.TxImagen.TabIndex = 5;
+            this.TxImagen.TabIndex = 4;
             // 
             // TxCodigo
             // 
@@ -172,7 +172,7 @@
             this.TxCodigo.Location = new System.Drawing.Point(274, 77);
             this.TxCodigo.Name = "TxCodigo";
             this.TxCodigo.Size = new System.Drawing.Size(231, 31);
-            this.TxCodigo.TabIndex = 1;
+            this.TxCodigo.TabIndex = 0;
             // 
             // LavelUrlImagen
             // 

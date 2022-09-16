@@ -133,7 +133,7 @@ namespace TPWIinForm_Linares_Falduri
 
             if (Filtro.Length >= 3)
             {
-               ListaAvanzada = ListaArticulos.FindAll(x => x.Nombre.ToUpper().Contains(Filtro.ToUpper()) || x.Codigo.ToUpper().Contains(Filtro.ToUpper()));
+               ListaAvanzada = ListaArticulos.FindAll(x => x.Nombre.ToUpper().Contains(Filtro.ToUpper()) || x.Codigo.ToUpper().Contains(Filtro.ToUpper()) || x.Marca.Descripcion.ToUpper().Contains(Filtro.ToUpper())||x.Categoria.Descripcion.ToUpper().Contains(Filtro.ToUpper()));
             }
             else
             {

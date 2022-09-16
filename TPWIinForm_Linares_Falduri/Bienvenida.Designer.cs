@@ -49,7 +49,7 @@
             this.LabelNombre.Location = new System.Drawing.Point(14, 428);
             this.LabelNombre.Name = "LabelNombre";
             this.LabelNombre.Size = new System.Drawing.Size(94, 26);
-            this.LabelNombre.TabIndex = 1;
+            this.LabelNombre.TabIndex = 3;
             this.LabelNombre.Text = "Nombre:";
             // 
             // TxtNombre
@@ -58,7 +58,7 @@
             this.TxtNombre.Location = new System.Drawing.Point(114, 427);
             this.TxtNombre.Name = "TxtNombre";
             this.TxtNombre.Size = new System.Drawing.Size(198, 27);
-            this.TxtNombre.TabIndex = 2;
+            this.TxtNombre.TabIndex = 0;
             this.TxtNombre.TextChanged += new System.EventHandler(this.TextBoxNombre_TextChanged);
             // 
             // BotonContinuar
@@ -67,7 +67,7 @@
             this.BotonContinuar.Location = new System.Drawing.Point(376, 404);
             this.BotonContinuar.Name = "BotonContinuar";
             this.BotonContinuar.Size = new System.Drawing.Size(148, 50);
-            this.BotonContinuar.TabIndex = 3;
+            this.BotonContinuar.TabIndex = 1;
             this.BotonContinuar.Text = "Continuar";
             this.BotonContinuar.UseVisualStyleBackColor = false;
             this.BotonContinuar.Click += new System.EventHandler(this.BotonContinuar_Click);
@@ -78,7 +78,7 @@
             this.BotonSalir.Location = new System.Drawing.Point(734, 432);
             this.BotonSalir.Name = "BotonSalir";
             this.BotonSalir.Size = new System.Drawing.Size(106, 41);
-            this.BotonSalir.TabIndex = 4;
+            this.BotonSalir.TabIndex = 2;
             this.BotonSalir.Text = "Salir";
             this.BotonSalir.UseVisualStyleBackColor = false;
             this.BotonSalir.Click += new System.EventHandler(this.BotonSalir_Click);

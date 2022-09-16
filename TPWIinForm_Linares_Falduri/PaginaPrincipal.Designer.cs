@@ -48,7 +48,7 @@
             this.LevelSaludo.Location = new System.Drawing.Point(12, 9);
             this.LevelSaludo.Name = "LevelSaludo";
             this.LevelSaludo.Size = new System.Drawing.Size(102, 22);
-            this.LevelSaludo.TabIndex = 0;
+            this.LevelSaludo.TabIndex = 6;
             this.LevelSaludo.Text = "Bievenido, ";
             // 
             // Btn_Agregar
@@ -58,7 +58,7 @@
             this.Btn_Agregar.Location = new System.Drawing.Point(12, 557);
             this.Btn_Agregar.Name = "Btn_Agregar";
             this.Btn_Agregar.Size = new System.Drawing.Size(157, 38);
-            this.Btn_Agregar.TabIndex = 3;
+            this.Btn_Agregar.TabIndex = 2;
             this.Btn_Agregar.Text = "Agregar";
             this.Btn_Agregar.UseVisualStyleBackColor = false;
             this.Btn_Agregar.Click += new System.EventHandler(this.Btn_Agregar_Click);
@@ -70,7 +70,7 @@
             this.Btn_Exit.Location = new System.Drawing.Point(1058, 584);
             this.Btn_Exit.Name = "Btn_Exit";
             this.Btn_Exit.Size = new System.Drawing.Size(112, 57);
-            this.Btn_Exit.TabIndex = 6;
+            this.Btn_Exit.TabIndex = 5;
             this.Btn_Exit.Text = "Volver al Inicio";
             this.Btn_Exit.UseVisualStyleBackColor = false;
             this.Btn_Exit.Click += new System.EventHandler(this.Btn_Exit_Click);
@@ -80,7 +80,7 @@
             this.BtnELiminar.Location = new System.Drawing.Point(338, 559);
             this.BtnELiminar.Name = "BtnELiminar";
             this.BtnELiminar.Size = new System.Drawing.Size(157, 38);
-            this.BtnELiminar.TabIndex = 11;
+            this.BtnELiminar.TabIndex = 4;
             this.BtnELiminar.Text = "Eliminar";
             this.BtnELiminar.UseVisualStyleBackColor = true;
             this.BtnELiminar.Click += new System.EventHandler(this.BtnELiminar_Click);
@@ -90,7 +90,7 @@
             this.BtnModificar.Location = new System.Drawing.Point(175, 557);
             this.BtnModificar.Name = "BtnModificar";
             this.BtnModificar.Size = new System.Drawing.Size(157, 38);
-            this.BtnModificar.TabIndex = 10;
+            this.BtnModificar.TabIndex = 3;
             this.BtnModificar.Text = "Modificar";
             this.BtnModificar.UseVisualStyleBackColor = true;
             this.BtnModificar.Click += new System.EventHandler(this.BtnModificar_Click_1);
@@ -114,7 +114,7 @@
             this.Dgv_Ventas.RowTemplate.Height = 24;
             this.Dgv_Ventas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.Dgv_Ventas.Size = new System.Drawing.Size(762, 300);
-            this.Dgv_Ventas.TabIndex = 8;
+            this.Dgv_Ventas.TabIndex = 0;
             this.Dgv_Ventas.SelectionChanged += new System.EventHandler(this.Dgv_Ventas_SelectionChanged_1);
             // 
             // LabelBusqueda_avanzada
@@ -122,8 +122,8 @@
             this.LabelBusqueda_avanzada.AutoSize = true;
             this.LabelBusqueda_avanzada.Location = new System.Drawing.Point(24, 468);
             this.LabelBusqueda_avanzada.Name = "LabelBusqueda_avanzada";
-            this.LabelBusqueda_avanzada.Size = new System.Drawing.Size(166, 20);
-            this.LabelBusqueda_avanzada.TabIndex = 12;
+            this.LabelBusqueda_avanzada.Size = new System.Drawing.Size(133, 16);
+            this.LabelBusqueda_avanzada.TabIndex = 7;
             this.LabelBusqueda_avanzada.Text = "Busqueda Avanzada";
             // 
             // TxBusqueda
@@ -131,7 +131,7 @@
             this.TxBusqueda.Location = new System.Drawing.Point(161, 468);
             this.TxBusqueda.Name = "TxBusqueda";
             this.TxBusqueda.Size = new System.Drawing.Size(318, 22);
-            this.TxBusqueda.TabIndex = 13;
+            this.TxBusqueda.TabIndex = 1;
             this.TxBusqueda.TextChanged += new System.EventHandler(this.TxBusqueda_TextChanged);
             // 
             // PaginaPrincipal
