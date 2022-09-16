@@ -68,7 +68,7 @@ namespace TPWIinForm_Linares_Falduri
             try
             {
                 DialogResult respuesta = MessageBox.Show("¿De verdad querés eliminarlo?", "Eliminando", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-               
+
                 if (respuesta == DialogResult.Yes)
                 {
                     ArticuloSeleccionado = (Articulo)Dgv_Ventas.CurrentRow.DataBoundItem;
@@ -134,11 +134,11 @@ namespace TPWIinForm_Linares_Falduri
         private void TxBusqueda_TextChanged(object sender, EventArgs e)
         {
             List<Articulo> ListaAvanzada;
-            string Filtro= TxBusqueda.Text;
+            string Filtro = TxBusqueda.Text;
 
             if (Filtro.Length >= 3)
             {
-               ListaAvanzada = ListaArticulos.FindAll(x => x.Nombre.ToUpper().Contains(Filtro.ToUpper()) || x.Codigo.ToUpper().Contains(Filtro.ToUpper()) || x.Marca.Descripcion.ToUpper().Contains(Filtro.ToUpper())||x.Categoria.Descripcion.ToUpper().Contains(Filtro.ToUpper()));
+                ListaAvanzada = ListaArticulos.FindAll(x => x.Nombre.ToUpper().Contains(Filtro.ToUpper()) || x.Codigo.ToUpper().Contains(Filtro.ToUpper()) || x.Marca.Descripcion.ToUpper().Contains(Filtro.ToUpper()) || x.Categoria.Descripcion.ToUpper().Contains(Filtro.ToUpper()));
             }
             else
             {
@@ -172,18 +172,17 @@ namespace TPWIinForm_Linares_Falduri
 
         private void BtnBuscar_Click(object sender, EventArgs e)
         {
-            Articulo_Negocio articulo_Negocio = new Articulo_Negocio(); 
+            Articulo_Negocio articulo_Negocio = new Articulo_Negocio();
             try
             {
-            string Campo=CbxCampo.SelectedItem.ToString();
-            string Criterio=CbxCriterio.SelectedItem.ToString();
-            string Filtro = TxBusqueda.Text;
-            Dgv_Ventas.DataSource= articulo_Negocio.Filtrar( Campo, Criterio, Filtro);
-
+                string Campo = CbxCampo.SelectedItem.ToString();
+                string Criterio = CbxCriterio.SelectedItem.ToString();
+                string Filtro = TxBusqueda.Text;
+                Dgv_Ventas.DataSource = articulo_Negocio.Filtrar(Campo, Criterio, Filtro);
             }
             catch (Exception ex)
             {
-                        MessageBox.Show(ex.ToString());
+                MessageBox.Show(ex.ToString());
             }
         }
     }
