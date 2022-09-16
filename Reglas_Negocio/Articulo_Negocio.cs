@@ -20,7 +20,7 @@ namespace Reglas_Negocio
                 DataBase.setearConsulta("SELECT ART.ID, ART.CODIGO, ART.NOMBRE, ART.DESCRIPCION, MAR.ID, MAR.DESCRIPCION AS MARCA, CAT.ID, CAT.DESCRIPCION AS TIPO, ART.IMAGENURL, ART.PRECIO  FROM ARTICULOS AS ART " +
                     "INNER JOIN MARCAS AS MAR ON MAR.ID = ART.IDMARCA " +
                     "INNER JOIN CATEGORIAS AS CAT ON CAT.ID = MAR.ID");
-                
+
                 DataBase.ejecutarLectura();
 
                 while (DataBase.Lector.Read())
@@ -94,9 +94,9 @@ namespace Reglas_Negocio
             try
             {
                 DataBase.setearConsulta("DELETE FROM ARTICULOS WHERE id = @id");
-               
+
                 DataBase.setearParametro("@id", id);
-                
+
                 DataBase.ejecutarAccion();
             }
             catch (Exception ex)
@@ -117,7 +117,7 @@ namespace Reglas_Negocio
             {
                 DataBase.setearConsulta("update ARTICULOS set Codigo = @Codigo, Nombre = @Nombre, Descripcion = @Desc, " +
                 "IdMarca = @IdMarca, IdCategoria = @IdDCategoria, ImagenUrl = @Url, Precio = @Precio Where Id = @Id");
-                
+
                 DataBase.setearParametro("@Codigo", NuevoArticulo.Codigo);
                 DataBase.setearParametro("@Nombre", NuevoArticulo.Nombre);
                 DataBase.setearParametro("@Desc", NuevoArticulo.Descripcion);
@@ -125,7 +125,7 @@ namespace Reglas_Negocio
                 DataBase.setearParametro("@IdMarca", NuevoArticulo.Marca.MarcaId);
                 DataBase.setearParametro("@IdDCategoria", NuevoArticulo.Categoria.CategoriaId);
                 DataBase.setearParametro("@Precio", NuevoArticulo.Precio);
-                
+
                 DataBase.setearParametro("@Id", IdArticulo);
 
                 DataBase.ejecutarAccion();
@@ -137,6 +137,74 @@ namespace Reglas_Negocio
             finally
             {
                 DataBase.cerrarConexion();
+            }
+        }
+
+        public List<Articulo> Filtrar(string campo, string criterio, string filtro)
+        {
+            List<Articulo> lista = new List<Articulo>();
+            Acceso_A_Db Aux = new Acceso_A_Db();
+
+            try
+            {
+                string Consulta = ("SELECT ART.ID, ART.CODIGO, ART.NOMBRE, ART.DESCRIPCION, MAR.ID, MAR.DESCRIPCION AS MARCA, CAT.ID, CAT.DESCRIPCION AS TIPO, ART.IMAGENURL, ART.PRECIO  FROM ARTICULOS AS ART INNER JOIN MARCAS AS MAR ON MAR.ID = ART.IDMARCA INNER JOIN CATEGORIAS AS CAT ON CAT.ID = MAR.ID AND");
+                switch (campo)
+                {
+                    case "Precio":
+                        if (criterio == "Mayor a >") Consulta += "ART.PRECIO >" + filtro;
+                        if (criterio == "Mayor a <") Consulta += "ART.PRECIO <" + filtro;
+                        if (criterio == "Igual a =") Consulta += "ART.PRECIO =" + filtro;
+                        break;
+
+                    case "Nombre":
+                        if (criterio == "Comienza Con") Consulta += "ART.NOMBRE '" + filtro + "%' ";
+                        if (criterio == "Termina con ") Consulta += "ART.NOMBRE '%" + filtro + "'";
+                        if (criterio == "Contine...  ") Consulta += "ART.NOMBRE '%" + filtro + "%'";
+                        break;
+
+                    case "Descripcion":
+                        if (criterio == "Comienza con") Consulta += "MAR.DESCRIPCION  '" + filtro + "%' ";
+                        if (criterio == "Termina con") Consulta += "MAR.DESCRIPCION  '%" + filtro + "'";
+                        if (criterio == "Contine...") Consulta += "MAR.DESCRIPCION  '%" + filtro + "%'";
+                        break;
+
+                    default:
+                        break;
+
+
+                }
+                Aux.setearConsulta(Consulta);
+                Aux.ejecutarLectura();
+
+                while (Aux.Lector.Read())
+                {
+                    Articulo obj = new Articulo();
+
+                    obj.ArticuloId = Aux.Lector.GetInt32(0);
+                    obj.Codigo = Aux.Lector.GetString(1);
+                    obj.Nombre = Aux.Lector.GetString(2);
+                    obj.Descripcion = Aux.Lector.GetString(3);
+
+                    obj.Marca = new Marca();
+                    obj.Marca.MarcaId = Aux.Lector.GetInt32(4);
+                    obj.Marca.Descripcion = Aux.Lector.GetString(5);
+
+                    obj.Categoria = new Categoria();
+                    obj.Categoria.CategoriaId = Aux.Lector.GetInt32(6);
+                    obj.Categoria.Descripcion = Aux.Lector.GetString(7);
+
+                    obj.URLImagen = Aux.Lector.GetString(8);
+                    obj.Precio = Aux.Lector.GetDecimal(9);
+
+                    lista.Add(obj);
+
+                }
+                return lista;
+            }
+            catch (Exception Ex)
+            {
+
+                throw Ex;
             }
         }
     }

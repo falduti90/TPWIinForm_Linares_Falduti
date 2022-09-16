@@ -31,6 +31,11 @@ namespace TPWIinForm_Linares_Falduri
         private void PaginaPrincipal_Load(object sender, EventArgs e)
         {
             this.CargarPagina();
+
+            CbxCampo.Items.Add("Nombre");
+            CbxCampo.Items.Add("Pecio");
+            CbxCampo.Items.Add("Descripcion");
+
         }
 
         private void Btn_Exit_Click(object sender, EventArgs e)
@@ -143,6 +148,43 @@ namespace TPWIinForm_Linares_Falduri
             Dgv_Ventas.DataSource = null;
             Dgv_Ventas.DataSource = ListaAvanzada;
             OcultarColumnas();
+        }
+
+        private void CbxCampo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string Opcion = CbxCampo.SelectedItem.ToString();
+            if (Opcion == "Precio")
+            {
+                CbxCriterio.Items.Clear();
+                CbxCriterio.Items.Add("Mayor a >");
+                CbxCriterio.Items.Add("Menor a <");
+                CbxCriterio.Items.Add("Igual a =");
+
+            }
+            else
+            {
+                CbxCriterio.Items.Clear();
+                CbxCriterio.Items.Add("Comienza con");
+                CbxCriterio.Items.Add("Termina con");
+                CbxCriterio.Items.Add("Contine... ");
+            }
+        }
+
+        private void BtnBuscar_Click(object sender, EventArgs e)
+        {
+            Articulo_Negocio articulo_Negocio = new Articulo_Negocio(); 
+            try
+            {
+            string Campo=CbxCampo.SelectedItem.ToString();
+            string Criterio=CbxCriterio.SelectedItem.ToString();
+            string Filtro = TxBusqueda.Text;
+            Dgv_Ventas.DataSource= articulo_Negocio.Filtrar( Campo, Criterio, Filtro);
+
+            }
+            catch (Exception ex)
+            {
+                        MessageBox.Show(ex.ToString());
+            }
         }
     }
 }
