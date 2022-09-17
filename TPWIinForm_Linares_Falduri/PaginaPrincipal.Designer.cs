@@ -33,7 +33,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PaginaPrincipal));
-            this.LevelSaludo = new System.Windows.Forms.Label();
+            this.Saludo = new System.Windows.Forms.Label();
             this.Btn_Agregar = new System.Windows.Forms.Button();
             this.Btn_Exit = new System.Windows.Forms.Button();
             this.BtnELiminar = new System.Windows.Forms.Button();
@@ -58,17 +58,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // LevelSaludo
+            // Saludo
             // 
-            this.LevelSaludo.AutoSize = true;
-            this.LevelSaludo.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.LevelSaludo.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LevelSaludo.ForeColor = System.Drawing.Color.Gray;
-            this.LevelSaludo.Location = new System.Drawing.Point(797, 21);
-            this.LevelSaludo.Name = "LevelSaludo";
-            this.LevelSaludo.Size = new System.Drawing.Size(121, 25);
-            this.LevelSaludo.TabIndex = 6;
-            this.LevelSaludo.Text = "Bievenido, ";
+            this.Saludo.AutoSize = true;
+            this.Saludo.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Saludo.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Saludo.ForeColor = System.Drawing.Color.Gray;
+            this.Saludo.Location = new System.Drawing.Point(797, 21);
+            this.Saludo.Name = "Saludo";
+            this.Saludo.Size = new System.Drawing.Size(121, 25);
+            this.Saludo.TabIndex = 6;
+            this.Saludo.Text = "Bievenido, ";
             // 
             // Btn_Agregar
             // 
@@ -330,7 +330,7 @@
             this.Controls.Add(this.Dgv_Ventas);
             this.Controls.Add(this.Btn_Exit);
             this.Controls.Add(this.Btn_Agregar);
-            this.Controls.Add(this.LevelSaludo);
+            this.Controls.Add(this.Saludo);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -350,7 +350,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label LevelSaludo;
+        private System.Windows.Forms.Label Saludo;
         private System.Windows.Forms.Button Btn_Agregar;
         private System.Windows.Forms.Button Btn_Exit;
         private System.Windows.Forms.Button BtnELiminar;

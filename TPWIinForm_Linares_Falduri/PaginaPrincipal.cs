@@ -25,16 +25,14 @@ namespace TPWIinForm_Linares_Falduri
         public PaginaPrincipal(string Nombre)
         {
             InitializeComponent();
-            bool bandera=true;
-            if (bandera == true)
-            {
-                Nombre_Usuario = Nombre;
-                bandera = false;
-            }
+
+           Nombre_Usuario = Nombre;
+
         }
 
         private void PaginaPrincipal_Load(object sender, EventArgs e)
         {
+            Saludo.Text += Nombre_Usuario;
             this.CargarPagina();
 
             CbxCampo.Items.Add("Precio");
@@ -119,8 +117,6 @@ namespace TPWIinForm_Linares_Falduri
         private void CargarPagina()
         {
             Articulo_Negocio Articulos = new Articulo_Negocio();
-
-            LevelSaludo.Text += Nombre_Usuario;
 
             try
             {
