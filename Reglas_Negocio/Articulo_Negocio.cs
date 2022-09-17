@@ -17,16 +17,13 @@ namespace Reglas_Negocio
 
             try
             {
-                DataBase.setearConsulta("SELECT ART.ID, ART.CODIGO, ART.NOMBRE, ART.DESCRIPCION, MAR.ID, MAR.DESCRIPCION AS MARCA, CAT.ID, CAT.DESCRIPCION AS TIPO, ART.IMAGENURL, ART.PRECIO  FROM ARTICULOS AS ART " +
-                    "INNER JOIN MARCAS AS MAR ON MAR.ID = ART.IDMARCA " +
-                    "INNER JOIN CATEGORIAS AS CAT ON CAT.ID = MAR.ID");
-
+                DataBase.setearConsulta("SELECT ART.ID, ART.CODIGO, ART.NOMBRE, ART.DESCRIPCION, MAR.ID, MAR.DESCRIPCION AS MARCA, CAT.ID, CAT.DESCRIPCION AS TIPO, ART.IMAGENURL, ART.PRECIO  FROM ARTICULOS AS ART INNER JOIN MARCAS AS MAR ON MAR.ID = ART.IDMARCA INNER JOIN CATEGORIAS AS CAT ON CAT.ID = MAR.ID");
                 DataBase.ejecutarLectura();
 
                 while (DataBase.Lector.Read())
                 {
                     Articulo obj = new Articulo();
-                    
+
                     obj.ArticuloId = DataBase.Lector.GetInt32(0);
                     obj.Codigo = DataBase.Lector.GetString(1);
                     obj.Nombre = DataBase.Lector.GetString(2);
@@ -42,8 +39,8 @@ namespace Reglas_Negocio
 
                     obj.URLImagen = DataBase.Lector.GetString(8);
                     obj.Precio = DataBase.Lector.GetDecimal(9);
-                    //trunca a dos digitos el decimal
-                    obj.Precio = decimal.Round(obj.Precio,2);
+                    
+                    obj.Precio = decimal.Round(obj.Precio, 2); //trunca a dos digitos el decimal
 
                     list.Add(obj);
                 }
@@ -66,8 +63,7 @@ namespace Reglas_Negocio
 
             try
             {
-                DataBase.setearConsulta("INSERT INTO ARTICULOS (Codigo, Nombre, Descripcion, Precio, IdMarca, IdCategoria, ImagenUrl) " +
-                "values(@Codigo, @nombre, @desc, @Precio, @idMarca, @idDCategoria, @Url)");
+                DataBase.setearConsulta("INSERT INTO ARTICULOS (Codigo, Nombre, Descripcion, Precio, IdMarca, IdCategoria, ImagenUrl) values(@Codigo, @nombre, @desc, @Precio, @idMarca, @idDCategoria, @Url)");
 
                 DataBase.setearParametro("@Codigo", NuevoArticulo.Codigo);
                 DataBase.setearParametro("@nombre", NuevoArticulo.Nombre);
@@ -112,7 +108,7 @@ namespace Reglas_Negocio
 
         }
 
-        public void Modificar_Articulo(Articulo NuevoArticulo, int IdArticulo)
+        public void Modificar_Articulo(Articulo NuevoArticulo)
         {
             Acceso_A_Db DataBase = new Acceso_A_Db();
             try
@@ -128,7 +124,7 @@ namespace Reglas_Negocio
                 DataBase.setearParametro("@IdDCategoria", NuevoArticulo.Categoria.CategoriaId);
                 DataBase.setearParametro("@Precio", NuevoArticulo.Precio);
 
-                DataBase.setearParametro("@Id", IdArticulo);
+                DataBase.setearParametro("@Id", NuevoArticulo.ArticuloId);
 
                 DataBase.ejecutarAccion();
             }
@@ -153,47 +149,50 @@ namespace Reglas_Negocio
                 switch (campo)
                 {
                     case "Precio":
-                            
-                        if (campo=="Precio" && criterio== "Mayor a")
-                        {
+                        if (criterio == "Mayor a")
                             Consulta += "ART.PRECIO >" + filtro;
-                        }
+
+                        else if
+                            (criterio == "Menor a") Consulta += "ART.PRECIO <" + filtro;
+
                         else
-                        {
-                            if(criterio == "Menor a")
-                            {
-                                Consulta += "ART.PRECIO <" + filtro;
-                            }
-                            else
-                            {
-                                Consulta += "ART.PRECIO =" + filtro;
-                            }
-                        }
-                       
+                            Consulta += "ART.PRECIO =" + filtro;
                         break;
 
                     case "Nombre":
-                        if (criterio =="Comienza con") Consulta += "ART.NOMBRE  like '" + filtro + "%' ";
-                        if (criterio =="Termina con")  Consulta += "ART.NOMBRE like '%" + filtro + "'";
-                        if (criterio == "Contine") Consulta += "ART.NOMBRE like '%" + filtro + "%'";
+                        if (criterio == "Comienza con")
+                            Consulta += "ART.NOMBRE like '" + filtro + "%' ";
+
+                        else if (criterio == "Termina con")
+                            Consulta += "ART.NOMBRE like '%" + filtro + "' ";
+
+                        else
+                            Consulta += "ART.NOMBRE like '%" + filtro + "%' ";
                         break;
 
                     case "Categoria":
-                        if (criterio == "Celulares")    Consulta += "CAT.DESCRIPCION  like 'Celulares' ";
-                        if (criterio == "Televisores") Consulta += "CAT.DESCRIPCION  like 'Televisores'";
-                        if (criterio == "Media") Consulta += "CAT.DESCRIPCION  like 'Media'";
-                        if (criterio == "Audio") Consulta += "CAT.DESCRIPCION  like 'Audio'";
+                        if (criterio == "Celulares")
+                            Consulta += "CAT.DESCRIPCION  like 'Celulares' ";
+
+                        else if (criterio == "Televisores")
+                            Consulta += "CAT.DESCRIPCION  like 'Televisores'";
+
+                        else if (criterio == "Media")
+                            Consulta += "CAT.DESCRIPCION  like 'Media'";
+
+                        else
+                            Consulta += "CAT.DESCRIPCION  like 'Audio'";
                         break;
 
                     default:
                         break;
 
-
                 }
+
                 Aux.setearConsulta(Consulta);
                 Aux.ejecutarLectura();
 
-                 while (Aux.Lector.Read())
+                while (Aux.Lector.Read())
                 {
                     Articulo obj = new Articulo();
 
@@ -220,7 +219,6 @@ namespace Reglas_Negocio
             }
             catch (Exception Ex)
             {
-
                 throw Ex;
             }
         }
