@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AgregarArticulo));
             this.TxCodigo = new System.Windows.Forms.TextBox();
             this.TxImagen = new System.Windows.Forms.TextBox();
             this.TxPrecio = new System.Windows.Forms.TextBox();
@@ -204,11 +205,11 @@
             // 
             this.LevelDescripcion.AutoSize = true;
             this.LevelDescripcion.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.LevelDescripcion.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LevelDescripcion.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LevelDescripcion.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.LevelDescripcion.Location = new System.Drawing.Point(117, 112);
+            this.LevelDescripcion.Location = new System.Drawing.Point(116, 115);
             this.LevelDescripcion.Name = "LevelDescripcion";
-            this.LevelDescripcion.Size = new System.Drawing.Size(128, 27);
+            this.LevelDescripcion.Size = new System.Drawing.Size(115, 24);
             this.LevelDescripcion.TabIndex = 34;
             this.LevelDescripcion.Text = "Descripcion:";
             this.LevelDescripcion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -244,7 +245,7 @@
             this.pictureBox1.Image = global::TPWIinForm_Linares_Falduri.Properties.Resources.Diseño_sin_título__1_;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(741, 450);
+            this.pictureBox1.Size = new System.Drawing.Size(741, 460);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 39;
             this.pictureBox1.TabStop = false;
@@ -274,6 +275,7 @@
             this.Controls.Add(this.TxCodigo);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "AgregarArticulo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

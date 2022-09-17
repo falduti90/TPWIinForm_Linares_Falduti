@@ -155,30 +155,21 @@ namespace TPWIinForm_Linares_Falduri
             string Opcion = CbxCampo.SelectedItem.ToString();
             if (Opcion == "Precio")
             {
-                CbxCriterio.Items.Clear();
-                CbxCriterio.Items.Add("Mayor a");
-                CbxCriterio.Items.Add("Menor a");
-                CbxCriterio.Items.Add("Igual a");
-
+                ItemPrecio();
+              
             }
             else
             {
                 if (Opcion == "Nombre")
                 {
-                    CbxCriterio.Items.Clear();
-                    CbxCriterio.Items.Add("Comienza con");
-                    CbxCriterio.Items.Add("Termina con");
-                    CbxCriterio.Items.Add("Contine");
+                    ItemNombre();
                 }
                 else
                 {
                     if (Opcion == "Categoria")
                     {
-                        CbxCriterio.Items.Clear();
-                        CbxCriterio.Items.Add("Celulares");
-                        CbxCriterio.Items.Add("Televisores");
-                        CbxCriterio.Items.Add("Media");
-                        CbxCriterio.Items.Add("Audio");
+                        ItemCategoria();
+                        CheckCategoria();
 
                     }
 
@@ -238,15 +229,48 @@ namespace TPWIinForm_Linares_Falduri
             return false;
         }
 
-        private bool CheckNumeros (string Cadena)
-        {
-            foreach(char caracter in Cadena)
-            {
-                if (!(char.IsNumber(caracter))) return false;  
-            }
-            return true;
 
+        private void CheckCategoria()
+        {
+            if( CbxCampo.SelectedItem.ToString()=="Categoria")
+            {
+                TxFitro.Enabled = false;
+                TxFitro.Visible = false;
+            }
         }
+
+
+        private void ItemPrecio()
+        {
+            CbxCriterio.Items.Clear();
+            CbxCriterio.Items.Add("Mayor a");
+            CbxCriterio.Items.Add("Menor a");
+            CbxCriterio.Items.Add("Igual a");
+            TxFitro.Visible = true;
+            TxFitro.Enabled = true;
+           
+        }
+
+        private void ItemNombre()
+        {
+            CbxCriterio.Items.Clear();
+            CbxCriterio.Items.Add("Comienza con");
+            CbxCriterio.Items.Add("Termina con");
+            CbxCriterio.Items.Add("Contine");
+            TxFitro.Visible = true;
+            TxFitro.Enabled = true;
+        }
+
+        private void ItemCategoria()
+        {
+            CbxCriterio.Items.Clear();
+            CbxCriterio.Items.Add("Celulares");
+            CbxCriterio.Items.Add("Televisores");
+            CbxCriterio.Items.Add("Media");
+            CbxCriterio.Items.Add("Audio");
+          
+        }
+
 
     }
 }

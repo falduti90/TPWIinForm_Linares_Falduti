@@ -90,10 +90,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::TPWIinForm_Linares_Falduri.Properties.Resources.Caratula;
-            this.pictureBox1.Location = new System.Drawing.Point(4, -3);
+            this.pictureBox1.Location = new System.Drawing.Point(-7, -3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(862, 504);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.Size = new System.Drawing.Size(880, 504);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 
