@@ -34,7 +34,7 @@ namespace TPWIinForm_Linares_Falduri
 
             CbxCampo.Items.Add("Precio");
             CbxCampo.Items.Add("Nombre");
-            CbxCampo.Items.Add("Descripcion");
+            CbxCampo.Items.Add("Categoria");
 
         }
 
@@ -156,17 +156,34 @@ namespace TPWIinForm_Linares_Falduri
             if (Opcion == "Precio")
             {
                 CbxCriterio.Items.Clear();
-                CbxCriterio.Items.Add("Mayor a ");
-                CbxCriterio.Items.Add("Menor a ");
-                CbxCriterio.Items.Add("Igual a ");
+                CbxCriterio.Items.Add("Mayor a");
+                CbxCriterio.Items.Add("Menor a");
+                CbxCriterio.Items.Add("Igual a");
 
             }
             else
             {
-                CbxCriterio.Items.Clear();
-                CbxCriterio.Items.Add("Comienza con");
-                CbxCriterio.Items.Add("Termina con");
-                CbxCriterio.Items.Add("Contine");
+                if (Opcion == "Nombre")
+                {
+                    CbxCriterio.Items.Clear();
+                    CbxCriterio.Items.Add("Comienza con");
+                    CbxCriterio.Items.Add("Termina con");
+                    CbxCriterio.Items.Add("Contine");
+                }
+                else
+                {
+                    if (Opcion == "Categoria")
+                    {
+                        CbxCriterio.Items.Clear();
+                        CbxCriterio.Items.Add("Celulares");
+                        CbxCriterio.Items.Add("Televisores");
+                        CbxCriterio.Items.Add("Media");
+                        CbxCriterio.Items.Add("Audio");
+
+                    }
+
+                }
+
             }
         }
 
@@ -175,9 +192,11 @@ namespace TPWIinForm_Linares_Falduri
             Articulo_Negocio articulo_Negocio = new Articulo_Negocio();
             try
             {
+                if(CheckFiltros()) return;
+
                 string Campo = CbxCampo.SelectedItem.ToString();
                 string Criterio = CbxCriterio.SelectedItem.ToString();
-                string Filtro = TxBusqueda.Text;
+                string Filtro = TxFitro.Text;
                 Dgv_Ventas.DataSource = articulo_Negocio.Filtrar(Campo, Criterio, Filtro);
             }
             catch (Exception ex)
@@ -185,5 +204,50 @@ namespace TPWIinForm_Linares_Falduri
                 MessageBox.Show(ex.ToString());
             }
         }
+
+        private bool CheckFiltros()
+        {
+            if (CbxCampo.SelectedIndex < 0)
+            {
+                MessageBox.Show("Por favor elija una opcion");
+                return true;
+
+            }
+
+            if (CbxCampo.SelectedIndex < 0)
+            {
+                MessageBox.Show("Por favor elija una opcion");
+            }
+
+            if (CbxCampo.SelectedItem.ToString() == "Precio") 
+            {
+                if (string.IsNullOrEmpty(TxFitro.Text))
+                {
+                    MessageBox.Show("Seleccione el filtro correcto");
+                        return true;
+                }
+
+
+                /*if(!(CheckNumeros(TxFitro.ToString())))
+                {
+                    MessageBox.Show("Solo permite numeros");
+                    return true;
+                }*/
+            }
+
+            return false;
+        }
+
+        private bool CheckNumeros (string Cadena)
+        {
+            foreach(char caracter in Cadena)
+            {
+                if (!(char.IsNumber(caracter))) return false;  
+            }
+            return true;
+
+        }
+
+
     }
 }

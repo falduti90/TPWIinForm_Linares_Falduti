@@ -42,7 +42,7 @@
             this.CbxCriterio = new System.Windows.Forms.ComboBox();
             this.CbxCampo = new System.Windows.Forms.ComboBox();
             this.LabelFiltro = new System.Windows.Forms.Label();
-            this.TxFltro = new System.Windows.Forms.TextBox();
+            this.TxFitro = new System.Windows.Forms.TextBox();
             this.BtnBuscar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbxArticulos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_Ventas)).BeginInit();
@@ -187,12 +187,12 @@
             this.LabelFiltro.TabIndex = 14;
             this.LabelFiltro.Text = "Filtro";
             // 
-            // TxFltro
+            // TxFitro
             // 
-            this.TxFltro.Location = new System.Drawing.Point(778, 571);
-            this.TxFltro.Name = "TxFltro";
-            this.TxFltro.Size = new System.Drawing.Size(121, 22);
-            this.TxFltro.TabIndex = 15;
+            this.TxFitro.Location = new System.Drawing.Point(778, 571);
+            this.TxFitro.Name = "TxFitro";
+            this.TxFitro.Size = new System.Drawing.Size(121, 22);
+            this.TxFitro.TabIndex = 15;
             // 
             // BtnBuscar
             // 
@@ -211,7 +211,7 @@
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(1182, 653);
             this.Controls.Add(this.BtnBuscar);
-            this.Controls.Add(this.TxFltro);
+            this.Controls.Add(this.TxFitro);
             this.Controls.Add(this.LabelFiltro);
             this.Controls.Add(this.CbxCampo);
             this.Controls.Add(this.CbxCriterio);
@@ -255,7 +255,7 @@
         private System.Windows.Forms.ComboBox CbxCriterio;
         private System.Windows.Forms.ComboBox CbxCampo;
         private System.Windows.Forms.Label LabelFiltro;
-        private System.Windows.Forms.TextBox TxFltro;
+        private System.Windows.Forms.TextBox TxFitro;
         private System.Windows.Forms.Button BtnBuscar;
     }
 }

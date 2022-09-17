@@ -42,6 +42,8 @@ namespace Reglas_Negocio
 
                     obj.URLImagen = DataBase.Lector.GetString(8);
                     obj.Precio = DataBase.Lector.GetDecimal(9);
+                    //trunca a dos digitos el decimal
+                    obj.Precio = decimal.Round(obj.Precio,2);
 
                     list.Add(obj);
                 }
@@ -147,25 +149,40 @@ namespace Reglas_Negocio
 
             try
             {
-                string Consulta = ("SELECT ART.ID, ART.CODIGO, ART.NOMBRE, ART.DESCRIPCION, MAR.ID, MAR.DESCRIPCION AS MARCA, CAT.ID, CAT.DESCRIPCION AS TIPO, ART.IMAGENURL, ART.PRECIO  FROM ARTICULOS AS ART INNER JOIN MARCAS AS MAR ON MAR.ID = ART.IDMARCA INNER JOIN CATEGORIAS AS CAT ON CAT.ID = MAR.ID AND");
+                string Consulta = ("SELECT ART.ID, ART.CODIGO, ART.NOMBRE, ART.DESCRIPCION, MAR.ID, MAR.DESCRIPCION AS MARCA, CAT.ID, CAT.DESCRIPCION AS TIPO, ART.IMAGENURL, ART.PRECIO  FROM ARTICULOS AS ART, MARCAS AS MAR, CATEGORIAS AS CAT WHERE MAR.ID = ART.IDMARCA AND CAT.ID = MAR.ID AND ");
                 switch (campo)
                 {
                     case "Precio":
-                        if (criterio == "Mayor a ") Consulta += "ART.PRECIO >" + filtro;
-                        if (criterio == "Mayor a ") Consulta += "ART.PRECIO <" + filtro;
-                        if (criterio == "Igual a ") Consulta += "ART.PRECIO =" + filtro;
+                            
+                        if (campo=="Precio" && criterio== "Mayor a")
+                        {
+                            Consulta += "ART.PRECIO >" + filtro;
+                        }
+                        else
+                        {
+                            if(criterio == "Menor a")
+                            {
+                                Consulta += "ART.PRECIO <" + filtro;
+                            }
+                            else
+                            {
+                                Consulta += "ART.PRECIO =" + filtro;
+                            }
+                        }
+                       
                         break;
 
                     case "Nombre":
-                        if (criterio == "Comienza Con") Consulta += "ART.NOMBRE  like'" + filtro + "%' ";
-                        if (criterio == "Termina con ") Consulta += "ART.NOMBRE like '%" + filtro + "'";
+                        if (criterio =="Comienza con") Consulta += "ART.NOMBRE  like '" + filtro + "%' ";
+                        if (criterio =="Termina con")  Consulta += "ART.NOMBRE like '%" + filtro + "'";
                         if (criterio == "Contine") Consulta += "ART.NOMBRE like '%" + filtro + "%'";
                         break;
 
-                    case "Descripcion":
-                        if (criterio == "Comienza con") Consulta += "MAR.DESCRIPCION  like '" + filtro + "%' ";
-                        if (criterio == "Termina con") Consulta += "MAR.DESCRIPCION  like '%" + filtro + "'";
-                        if (criterio == "Contine") Consulta += "MAR.DESCRIPCION  like '%" + filtro + "%'";
+                    case "Categoria":
+                        if (criterio == "Celulares")    Consulta += "CAT.DESCRIPCION  like 'Celulares' ";
+                        if (criterio == "Televisores") Consulta += "CAT.DESCRIPCION  like 'Televisores'";
+                        if (criterio == "Media") Consulta += "CAT.DESCRIPCION  like 'Media'";
+                        if (criterio == "Audio") Consulta += "CAT.DESCRIPCION  like 'Audio'";
                         break;
 
                     default:
@@ -176,7 +193,7 @@ namespace Reglas_Negocio
                 Aux.setearConsulta(Consulta);
                 Aux.ejecutarLectura();
 
-                while (Aux.Lector.Read())
+                 while (Aux.Lector.Read())
                 {
                     Articulo obj = new Articulo();
 

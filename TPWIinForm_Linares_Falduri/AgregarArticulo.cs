@@ -71,6 +71,9 @@ namespace TPWIinForm_Linares_Falduri
             Close();
         }
 
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
 
+        }
     }
 }
