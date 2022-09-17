@@ -25,7 +25,12 @@ namespace TPWIinForm_Linares_Falduri
         public PaginaPrincipal(string Nombre)
         {
             InitializeComponent();
-            Nombre_Usuario = Nombre;
+            bool bandera=true;
+            if (bandera == true)
+            {
+                Nombre_Usuario = Nombre;
+                bandera = false;
+            }
         }
 
         private void PaginaPrincipal_Load(object sender, EventArgs e)
