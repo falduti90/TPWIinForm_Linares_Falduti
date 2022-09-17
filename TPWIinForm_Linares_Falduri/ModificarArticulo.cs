@@ -76,7 +76,7 @@ namespace TPWIinForm_Linares_Falduri
                 Art.Marca = (Marca)CboMarca.SelectedItem;
                 Art.Categoria = (Categoria)CboCategoria.SelectedItem;
 
-                articulo_Negocio.Modificar_Articulo(Art, Art.ArticuloId);
+                articulo_Negocio.Modificar_Articulo(Art);
 
                 MessageBox.Show("El Articulo fue modificado con exito");
 
