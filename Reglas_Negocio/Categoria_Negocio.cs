@@ -24,7 +24,7 @@ namespace Reglas_Negocio
                     Categoria Obj = new Categoria();
 
                     Obj.CategoriaId = DataBase.Lector.GetInt32(0);
-                    Obj.Descripcion= DataBase.Lector.GetString(1);
+                    Obj.Descripcion = DataBase.Lector.GetString(1);
 
                     list.Add(Obj);
                 }

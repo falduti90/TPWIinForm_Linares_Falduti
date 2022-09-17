@@ -17,7 +17,7 @@ namespace Reglas_Negocio
 
             try
             {
-                DataBase.setearConsulta("SELECT ART.ID, ART.CODIGO, ART.NOMBRE, ART.DESCRIPCION, MAR.ID, MAR.DESCRIPCION AS MARCA, CAT.ID, CAT.DESCRIPCION AS TIPO, ART.IMAGENURL, ART.PRECIO  FROM ARTICULOS AS ART INNER JOIN MARCAS AS MAR ON MAR.ID = ART.IDMARCA INNER JOIN CATEGORIAS AS CAT ON CAT.ID = MAR.ID");
+                DataBase.setearConsulta("SELECT ART.ID, ART.CODIGO, ART.NOMBRE, ART.DESCRIPCION, MAR.ID, MAR.DESCRIPCION AS MARCA, CAT.ID, CAT.DESCRIPCION AS TIPO, ART.IMAGENURL, ART.PRECIO FROM ARTICULOS AS ART INNER JOIN MARCAS AS MAR ON MAR.ID = ART.IDMARCA INNER JOIN CATEGORIAS AS CAT ON CAT.ID = MAR.ID");
                 DataBase.ejecutarLectura();
 
                 while (DataBase.Lector.Read())
@@ -39,7 +39,7 @@ namespace Reglas_Negocio
 
                     obj.URLImagen = DataBase.Lector.GetString(8);
                     obj.Precio = DataBase.Lector.GetDecimal(9);
-                    
+
                     obj.Precio = decimal.Round(obj.Precio, 2); //trunca a dos digitos el decimal
 
                     list.Add(obj);
@@ -105,7 +105,6 @@ namespace Reglas_Negocio
             {
                 DataBase.cerrarConexion();
             }
-
         }
 
         public void Modificar_Articulo(Articulo NuevoArticulo)
@@ -141,11 +140,12 @@ namespace Reglas_Negocio
         public List<Articulo> Filtrar(string campo, string criterio, string filtro)
         {
             List<Articulo> lista = new List<Articulo>();
-            Acceso_A_Db Aux = new Acceso_A_Db();
+            Acceso_A_Db Database = new Acceso_A_Db();
 
             try
             {
                 string Consulta = ("SELECT ART.ID, ART.CODIGO, ART.NOMBRE, ART.DESCRIPCION, MAR.ID, MAR.DESCRIPCION AS MARCA, CAT.ID, CAT.DESCRIPCION AS TIPO, ART.IMAGENURL, ART.PRECIO  FROM ARTICULOS AS ART, MARCAS AS MAR, CATEGORIAS AS CAT WHERE MAR.ID = ART.IDMARCA AND CAT.ID = MAR.ID AND ");
+                
                 switch (campo)
                 {
                     case "Precio":
@@ -186,40 +186,42 @@ namespace Reglas_Negocio
 
                     default:
                         break;
-
                 }
 
-                Aux.setearConsulta(Consulta);
-                Aux.ejecutarLectura();
+                Database.setearConsulta(Consulta);
+                Database.ejecutarLectura();
 
-                while (Aux.Lector.Read())
+                while (Database.Lector.Read())
                 {
                     Articulo obj = new Articulo();
 
-                    obj.ArticuloId = Aux.Lector.GetInt32(0);
-                    obj.Codigo = Aux.Lector.GetString(1);
-                    obj.Nombre = Aux.Lector.GetString(2);
-                    obj.Descripcion = Aux.Lector.GetString(3);
+                    obj.ArticuloId = Database.Lector.GetInt32(0);
+                    obj.Codigo = Database.Lector.GetString(1);
+                    obj.Nombre = Database.Lector.GetString(2);
+                    obj.Descripcion = Database.Lector.GetString(3);
 
                     obj.Marca = new Marca();
-                    obj.Marca.MarcaId = Aux.Lector.GetInt32(4);
-                    obj.Marca.Descripcion = Aux.Lector.GetString(5);
+                    obj.Marca.MarcaId = Database.Lector.GetInt32(4);
+                    obj.Marca.Descripcion = Database.Lector.GetString(5);
 
                     obj.Categoria = new Categoria();
-                    obj.Categoria.CategoriaId = Aux.Lector.GetInt32(6);
-                    obj.Categoria.Descripcion = Aux.Lector.GetString(7);
+                    obj.Categoria.CategoriaId = Database.Lector.GetInt32(6);
+                    obj.Categoria.Descripcion = Database.Lector.GetString(7);
 
-                    obj.URLImagen = Aux.Lector.GetString(8);
-                    obj.Precio = Aux.Lector.GetDecimal(9);
+                    obj.URLImagen = Database.Lector.GetString(8);
+                    obj.Precio = Database.Lector.GetDecimal(9);
 
                     lista.Add(obj);
-
                 }
                 return lista;
             }
             catch (Exception Ex)
             {
                 throw Ex;
+            }
+            finally
+            {
+                Database.cerrarConexion();
             }
         }
     }

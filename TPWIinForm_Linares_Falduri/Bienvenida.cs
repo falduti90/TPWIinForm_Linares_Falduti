@@ -25,7 +25,7 @@ namespace TPWIinForm_Linares_Falduri
 
         private void BotonSalir_Click(object sender, EventArgs e)
         {
-            this.Close();   
+            this.Close();
         }
 
 
@@ -33,7 +33,7 @@ namespace TPWIinForm_Linares_Falduri
         {
             if (TxtNombre.Text.Trim() != string.Empty && TxtNombre.Text.All(char.IsLetter))
             {
-               BotonContinuar.Enabled = true;
+                BotonContinuar.Enabled = true;
                 errorProvider1.SetError(TxtNombre, "");
             }
             else
@@ -54,7 +54,7 @@ namespace TPWIinForm_Linares_Falduri
         private void BotonContinuar_Click(object sender, EventArgs e)
         {
             using (PaginaPrincipal VentanaPrincipal = new PaginaPrincipal((string)TxtNombre.Text))
-            VentanaPrincipal.ShowDialog();
+                VentanaPrincipal.ShowDialog();
         }
     }
 }

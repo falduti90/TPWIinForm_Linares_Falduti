@@ -16,7 +16,7 @@ namespace TPWIinForm_Linares_Falduri
     public partial class ModificarArticulo : Form
     {
         private Articulo Obj = null;
-        
+
         public ModificarArticulo()
         {
             InitializeComponent();
@@ -66,7 +66,7 @@ namespace TPWIinForm_Linares_Falduri
             try
             {
                 Art.ArticuloId = Obj.ArticuloId;
-                
+
                 Art.Codigo = TxCodigo.Text;
                 Art.Nombre = TxNombre.Text;
                 Art.Descripcion = TxDesc.Text;

@@ -26,7 +26,7 @@ namespace TPWIinForm_Linares_Falduri
         {
             InitializeComponent();
 
-           Nombre_Usuario = Nombre;
+            Nombre_Usuario = Nombre;
 
         }
 
@@ -38,7 +38,6 @@ namespace TPWIinForm_Linares_Falduri
             CbxCampo.Items.Add("Precio");
             CbxCampo.Items.Add("Nombre");
             CbxCampo.Items.Add("Categoria");
-
         }
 
         private void Btn_Exit_Click(object sender, EventArgs e)
@@ -61,6 +60,7 @@ namespace TPWIinForm_Linares_Falduri
             articulo = (Articulo)Dgv_Ventas.CurrentRow.DataBoundItem;
             ModificarArticulo ModificarArticuloForm = new ModificarArticulo(articulo);
             ModificarArticuloForm.ShowDialog();
+            
             this.CargarPagina();
         }
 
@@ -157,7 +157,6 @@ namespace TPWIinForm_Linares_Falduri
             if (Opcion == "Precio")
             {
                 ItemPrecio();
-              
             }
             else
             {
@@ -171,11 +170,8 @@ namespace TPWIinForm_Linares_Falduri
                     {
                         ItemCategoria();
                         CheckCategoria();
-
                     }
-
                 }
-
             }
         }
 
@@ -184,7 +180,7 @@ namespace TPWIinForm_Linares_Falduri
             Articulo_Negocio articulo_Negocio = new Articulo_Negocio();
             try
             {
-                if(CheckFiltros()) return;
+                if (CheckFiltros()) return;
 
                 string Campo = CbxCampo.SelectedItem.ToString();
                 string Criterio = CbxCriterio.SelectedItem.ToString();
@@ -211,12 +207,12 @@ namespace TPWIinForm_Linares_Falduri
                 MessageBox.Show("Por favor elija una opcion");
             }
 
-            if (CbxCampo.SelectedItem.ToString() == "Precio") 
+            if (CbxCampo.SelectedItem.ToString() == "Precio")
             {
                 if (string.IsNullOrEmpty(TxFitro.Text))
                 {
                     MessageBox.Show("Seleccione el filtro correcto");
-                        return true;
+                    return true;
                 }
 
 
@@ -233,10 +229,12 @@ namespace TPWIinForm_Linares_Falduri
 
         private void CheckCategoria()
         {
-            if( CbxCampo.SelectedItem.ToString()=="Categoria")
+            if (CbxCampo.SelectedItem.ToString() == "Categoria")
             {
                 TxFitro.Enabled = false;
                 TxFitro.Visible = false;
+                LabelFiltro.Enabled = false;
+                LabelFiltro.Visible = false;
             }
         }
 
@@ -249,7 +247,6 @@ namespace TPWIinForm_Linares_Falduri
             CbxCriterio.Items.Add("Igual a");
             TxFitro.Visible = true;
             TxFitro.Enabled = true;
-           
         }
 
         private void ItemNombre()
@@ -269,9 +266,6 @@ namespace TPWIinForm_Linares_Falduri
             CbxCriterio.Items.Add("Televisores");
             CbxCriterio.Items.Add("Media");
             CbxCriterio.Items.Add("Audio");
-          
         }
-
-
     }
 }
