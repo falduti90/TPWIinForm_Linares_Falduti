@@ -44,18 +44,18 @@
             // 
             this.LabelNombre.AutoSize = true;
             this.LabelNombre.BackColor = System.Drawing.Color.Moccasin;
-            this.LabelNombre.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelNombre.Font = new System.Drawing.Font("Times New Roman", 14F);
             this.LabelNombre.ForeColor = System.Drawing.Color.Blue;
             this.LabelNombre.Location = new System.Drawing.Point(14, 428);
             this.LabelNombre.Name = "LabelNombre";
-            this.LabelNombre.Size = new System.Drawing.Size(94, 26);
+            this.LabelNombre.Size = new System.Drawing.Size(96, 27);
             this.LabelNombre.TabIndex = 3;
             this.LabelNombre.Text = "Nombre:";
             // 
             // TxtNombre
             // 
             this.TxtNombre.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtNombre.Location = new System.Drawing.Point(114, 427);
+            this.TxtNombre.Location = new System.Drawing.Point(138, 427);
             this.TxtNombre.Name = "TxtNombre";
             this.TxtNombre.Size = new System.Drawing.Size(198, 27);
             this.TxtNombre.TabIndex = 0;
@@ -64,7 +64,7 @@
             // BotonContinuar
             // 
             this.BotonContinuar.BackColor = System.Drawing.SystemColors.Highlight;
-            this.BotonContinuar.Location = new System.Drawing.Point(376, 404);
+            this.BotonContinuar.Location = new System.Drawing.Point(383, 418);
             this.BotonContinuar.Name = "BotonContinuar";
             this.BotonContinuar.Size = new System.Drawing.Size(148, 50);
             this.BotonContinuar.TabIndex = 1;
@@ -75,7 +75,7 @@
             // BotonSalir
             // 
             this.BotonSalir.BackColor = System.Drawing.Color.IndianRed;
-            this.BotonSalir.Location = new System.Drawing.Point(734, 432);
+            this.BotonSalir.Location = new System.Drawing.Point(580, 427);
             this.BotonSalir.Name = "BotonSalir";
             this.BotonSalir.Size = new System.Drawing.Size(106, 41);
             this.BotonSalir.TabIndex = 2;

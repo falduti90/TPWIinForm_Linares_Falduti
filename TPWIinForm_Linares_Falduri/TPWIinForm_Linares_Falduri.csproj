@@ -113,6 +113,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\Cel.ico" />
+    <None Include="Resources\Logo - Simple Minimalista Lineal - Negro Blanco1.png" />
+    <None Include="Resources\Logo - Simple Minimalista Lineal - Negro Blanco.png" />
+    <None Include="Resources\Diseño sin título %281%29.png" />
+    <None Include="Resources\Fondo de pantalla minimalista escritorio frase motivación negro.png" />
+    <None Include="Resources\Diseñopag.png" />
+    <None Include="Resources\Diseño sin título.png" />
     <None Include="Resources\Flyer evento música dj discoteca moderna violeta.png" />
     <None Include="Resources\Negro y Púrpura con Falla Digital Canal sobre Tecnología Banner para YouTube.png" />
     <None Include="Resources\Caratula.png" />

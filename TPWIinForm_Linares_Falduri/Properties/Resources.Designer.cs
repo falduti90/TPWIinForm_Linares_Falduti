@@ -73,9 +73,69 @@ namespace TPWIinForm_Linares_Falduri.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Diseño_sin_título {
+            get {
+                object obj = ResourceManager.GetObject("Diseño sin título", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Diseño_sin_título__1_ {
+            get {
+                object obj = ResourceManager.GetObject("Diseño sin título (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Diseñopag {
+            get {
+                object obj = ResourceManager.GetObject("Diseñopag", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Flyer_evento_música_dj_discoteca_moderna_violeta {
             get {
                 object obj = ResourceManager.GetObject("Flyer evento música dj discoteca moderna violeta", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Fondo_de_pantalla_minimalista_escritorio_frase_motivación_negro {
+            get {
+                object obj = ResourceManager.GetObject("Fondo de pantalla minimalista escritorio frase motivación negro", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logo___Simple_Minimalista_Lineal___Negro_Blanco {
+            get {
+                object obj = ResourceManager.GetObject("Logo - Simple Minimalista Lineal - Negro Blanco", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logo___Simple_Minimalista_Lineal___Negro_Blanco1 {
+            get {
+                object obj = ResourceManager.GetObject("Logo - Simple Minimalista Lineal - Negro Blanco1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
